@@ -43,6 +43,9 @@
 		B582DD431AE8D8B3007E7471 /* lutf8lib.c in Sources */ = {isa = PBXBuildFile; fileRef = B582DD1D1AE8D8B3007E7471 /* lutf8lib.c */; };
 		B582DD441AE8D8B3007E7471 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = B582DD1E1AE8D8B3007E7471 /* lvm.c */; };
 		B582DD451AE8D8B3007E7471 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = B582DD201AE8D8B3007E7471 /* lzio.c */; };
+		B582DD481AE8DB79007E7471 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B582DD471AE8DB79007E7471 /* GLUT.framework */; };
+		B582DD4A1AE8DB7F007E7471 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B582DD491AE8DB7F007E7471 /* OpenGL.framework */; };
+		B582DD4D1AE8DCD8007E7471 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B582DD4B1AE8DCD8007E7471 /* utils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -121,6 +124,10 @@
 		B582DD1F1AE8D8B3007E7471 /* lvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lvm.h; path = lua53/lvm.h; sourceTree = "<group>"; };
 		B582DD201AE8D8B3007E7471 /* lzio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lzio.c; path = lua53/lzio.c; sourceTree = "<group>"; };
 		B582DD211AE8D8B3007E7471 /* lzio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lzio.h; path = lua53/lzio.h; sourceTree = "<group>"; };
+		B582DD471AE8DB79007E7471 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		B582DD491AE8DB7F007E7471 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		B582DD4B1AE8DCD8007E7471 /* utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
+		B582DD4C1AE8DCD8007E7471 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +135,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B582DD4A1AE8DB7F007E7471 /* OpenGL.framework in Frameworks */,
+				B582DD481AE8DB79007E7471 /* GLUT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +146,8 @@
 		B582DCD11AE8D0B5007E7471 = {
 			isa = PBXGroup;
 			children = (
+				B582DD491AE8DB7F007E7471 /* OpenGL.framework */,
+				B582DD471AE8DB79007E7471 /* GLUT.framework */,
 				B582DCDC1AE8D0B5007E7471 /* Lua2d */,
 				B582DCDB1AE8D0B5007E7471 /* Products */,
 			);
@@ -155,6 +166,8 @@
 			children = (
 				B582DCE41AE8D20E007E7471 /* lua53 */,
 				B582DCDD1AE8D0B5007E7471 /* main.cpp */,
+				B582DD4B1AE8DCD8007E7471 /* utils.cpp */,
+				B582DD4C1AE8DCD8007E7471 /* utils.h */,
 			);
 			path = Lua2d;
 			sourceTree = "<group>";
@@ -313,6 +326,7 @@
 				B582DD2B1AE8D8B3007E7471 /* ldebug.c in Sources */,
 				B582DD371AE8D8B3007E7471 /* lopcodes.c in Sources */,
 				B582DD271AE8D8B3007E7471 /* lcode.c in Sources */,
+				B582DD4D1AE8DCD8007E7471 /* utils.cpp in Sources */,
 				B582DD391AE8D8B3007E7471 /* lparser.c in Sources */,
 				B582DD261AE8D8B3007E7471 /* lbitlib.c in Sources */,
 				B582DD411AE8D8B3007E7471 /* luac.c in Sources */,

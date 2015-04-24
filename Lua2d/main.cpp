@@ -8,12 +8,19 @@
 
 #include <iostream>
 
+#include <GLUT/GLUT.h>
+#include <OpenGL/gl3.h>
+
 extern "C" {
+
 #include "lua.h"
 #include "lauxlib.h"
 #include "lualib.h"
-    
+
 }
+
+#include "utils.h"
+
 static const char s_luachuck[] = "print(\"I am inside chunk!\")\
 return 123";
 static bool s_hasReaded = false;
@@ -31,6 +38,121 @@ const char * myChunkReader(lua_State* L, void* data, size_t* size)
     }
 }
 
+float vertices[] = {
+    0.0f, 0.5f,
+    0.5f, -0.5f,
+    -0.5f, -0.5f
+};
+
+static const char* vertexSource =
+"#version 150\n"
+"\n"
+"in vec2 position;\n"
+"\n"
+"\n"
+"void main()\n"
+"{\n"
+"    gl_Position = vec4(position, 0.0, 1.0);\n"
+"}\n";
+
+static const char* fragmentSource =
+"#version 150\n"
+"\n"
+"out vec4 outColor;\n"
+"\n"
+"void main()\n"
+"{\n"
+"    outColor = vec4(1.0,1.0,1.0,1.0);\n"
+"}\n";
+char clog[2014];
+GLuint vbo;
+GLuint vao;
+GLuint textureId;
+void init()
+{
+    LOG("GL_RENDERER", glGetString(GL_RENDERER),  " GL_VERSION = ",glGetString(GL_VERSION));
+    
+    //vao
+    glGenVertexArrays(1, &vao);
+    glBindVertexArray(vao);
+
+    //vbo
+    glGenBuffers(1, &vbo);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    
+    //shaders
+    GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+    glShaderSource(vertexShader, 1, &vertexSource, NULL);
+    glCompileShader(vertexShader);
+    GLint status;
+    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &status);
+    if (status != GL_TRUE) {
+        LOG("vertex shader compile failed.");
+        glGetShaderInfoLog(vertexShader, 1024, NULL, clog);
+        LOG(clog);
+        exit(1);
+    }
+    GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fragmentShader, 1, &fragmentSource, NULL);
+    glCompileShader(fragmentShader);
+    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &status);
+    if (status != GL_TRUE) {
+        LOG("fragment shader compile failed.");
+        glGetShaderInfoLog(fragmentShader, 1024, NULL, clog);
+        LOG(clog);
+        exit(1);
+    }
+    
+    //as program
+    GLuint shaderProgram = glCreateProgram();
+    glAttachShader(shaderProgram, vertexShader);
+    glAttachShader(shaderProgram, fragmentShader);
+    glBindFragDataLocation(shaderProgram, 0, "outColor");
+    glLinkProgram(shaderProgram);
+    glUseProgram(shaderProgram);
+    
+    //attrib
+    GLint posAttrib = glGetAttribLocation(shaderProgram, "position");
+    glEnableVertexAttribArray(posAttrib);
+    glVertexAttribPointer(posAttrib, 2, GL_FLOAT, GL_FALSE, 0, 0);
+    
+    
+    
+//    glGenTextures(1, &textureId);
+//    glBindTexture(GL_TEXTURE_2D, textureId);
+    
+}
+
+void display()
+{
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
+    glutSwapBuffers();
+}
+
+void reshape(int w, int h)
+{
+    
+}
+
+void myGlTestCode()
+{
+    LOG("gl Test Code");
+    int argc = 0;
+    char * argv[] = {0};
+    
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE |GLUT_3_2_CORE_PROFILE);
+    glutInitWindowPosition(100,100);
+    glutInitWindowSize(800, 600);
+    glutCreateWindow("lol model view");
+    glutDisplayFunc(display);
+    glutReshapeFunc(reshape);
+    init();
+    glutMainLoop();
+}
 
 int main(int argc, const char * argv[]) {
     
@@ -57,7 +179,8 @@ int main(int argc, const char * argv[]) {
     lua_call(L, 0, 1);
     lua_Integer res = lua_tointeger(L, -1);
     std::cout << res<< std::endl;
-    
     lua_close(L);
+    
+    myGlTestCode();
     return 0;
 }
