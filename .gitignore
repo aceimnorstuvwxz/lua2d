@@ -1,2 +1,3 @@
-.DS*
-.xcuserstate
+*.cpp
+*.DS_store
+*.xcuserstate

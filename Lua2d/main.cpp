@@ -5,8 +5,11 @@
 //  Created by chenbingfeng on 15/4/22.
 //  Copyright (c) 2015年 chenbingfeng. All rights reserved.
 //
+#include <math.h>
+#include <unistd.h>
 
 #include <iostream>
+#include <chrono>
 
 #include <GLUT/GLUT.h>
 #include <OpenGL/gl3.h>
@@ -58,16 +61,20 @@ static const char* vertexSource =
 static const char* fragmentSource =
 "#version 150\n"
 "\n"
+"uniform vec3 triangleColor;\n"
+"\n"
 "out vec4 outColor;\n"
 "\n"
 "void main()\n"
 "{\n"
-"    outColor = vec4(1.0,1.0,1.0,1.0);\n"
+"    outColor = vec4(triangleColor, 1.0);\n"
 "}\n";
 char clog[2014];
 GLuint vbo;
 GLuint vao;
+GLint uniColor;
 GLuint textureId;
+decltype(std::chrono::high_resolution_clock::now()) t_start;
 void init()
 {
     LOG("GL_RENDERER", glGetString(GL_RENDERER),  " GL_VERSION = ",glGetString(GL_VERSION));
@@ -117,19 +124,27 @@ void init()
     glEnableVertexAttribArray(posAttrib);
     glVertexAttribPointer(posAttrib, 2, GL_FLOAT, GL_FALSE, 0, 0);
     
+    uniColor = glGetUniformLocation(shaderProgram, "triangleColor");
+    glUniform3f(uniColor, 1.0f, 0.0f, 0.0f);
     
     
 //    glGenTextures(1, &textureId);
 //    glBindTexture(GL_TEXTURE_2D, textureId);
+    t_start = std::chrono::high_resolution_clock::now();
     
 }
 
 void display()
 {
+    auto t_now = std::chrono::high_resolution_clock::now();
+    float time = std::chrono::duration_cast<std::chrono::duration<float>>(t_now - t_start).count();
+    glUniform3f(uniColor, (sin(time * 4.0f) + 1.0f) / 2.0f, 0.0f, 0.0f);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     glDrawArrays(GL_TRIANGLES, 0, 3);
     glutSwapBuffers();
+    sleep(0.33);
+    glutPostRedisplay();
 }
 
 void reshape(int w, int h)
