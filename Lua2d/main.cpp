@@ -42,10 +42,10 @@ const char * myChunkReader(lua_State* L, void* data, size_t* size)
 }
 
 float vertices[] = {
-    0.0f, 0.5f, 1.0f, 0.0f, 0.0f,
-    0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
-    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f,
-    1.0f, 0.5f, 0.0f, 1.0f, 1.0f
+    0.0f, 0.5f, 1.0f,
+    0.5f, -0.5f, 0.0f,
+    -0.5f, -0.5f, 0.3f,
+    1.0f, 0.5f, 0.8f,
 };
 
 GLuint elements[] = {
@@ -57,14 +57,14 @@ static const char* vertexSource =
 "#version 150\n"
 "\n"
 "in vec2 position;\n"
-"in vec3 color;\n"
+"in float color;\n"
 "out vec3 Color;\n"
 "\n"
 "\n"
 "void main()\n"
 "{\n"
-"    Color = color;\n"
-"    gl_Position = vec4(position, 0.0, 1.0);\n"
+"    Color = vec3(color);\n"
+"    gl_Position = vec4(position.x, -position.y, 0.0, 1.0);\n"
 "}\n";
 
 static const char* fragmentSource =
@@ -77,7 +77,7 @@ static const char* fragmentSource =
 "\n"
 "void main()\n"
 "{\n"
-"    outColor = vec4(Color, 1.0);\n"
+"    outColor = vec4(vec3(1.0f,1.0f,1.0f) - Color, 1.0);\n"
 "}\n";
 char clog[2014];
 GLuint vbo;
@@ -102,7 +102,7 @@ void init()
     glGenBuffers(1, &ebo);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(elements), elements, GL_STATIC_DRAW);
-    
+
     //shaders
     GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertexShader, 1, &vertexSource, NULL);
@@ -137,11 +137,10 @@ void init()
     //attributes
     GLint posAttrib = glGetAttribLocation(shaderProgram, "position");
     glEnableVertexAttribArray(posAttrib);
-    glVertexAttribPointer(posAttrib, 2, GL_FLOAT, GL_FALSE, 5*sizeof(float), 0);
+    glVertexAttribPointer(posAttrib, 2, GL_FLOAT, GL_FALSE, 3*sizeof(float), 0);
     GLint colAttrib = glGetAttribLocation(shaderProgram, "color");
     glEnableVertexAttribArray(colAttrib);
-    glVertexAttribPointer(colAttrib, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), (GLvoid*)(2*sizeof(float)));
-    
+    glVertexAttribPointer(colAttrib, 1, GL_FLOAT, GL_FALSE, 3*sizeof(float), (GLvoid*)(2*sizeof(float)));
     
     uniColor = glGetUniformLocation(shaderProgram, "triangleColor");
     glUniform3f(uniColor, 1.0f, 0.0f, 0.0f);
