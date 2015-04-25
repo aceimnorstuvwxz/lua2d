@@ -42,32 +42,36 @@ const char * myChunkReader(lua_State* L, void* data, size_t* size)
 }
 
 float vertices[] = {
-    0.0f, 0.5f,
-    0.5f, -0.5f,
-    -0.5f, -0.5f
+    0.0f, 0.5f, 1.0f, 0.0f, 0.0f,
+    0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
+    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f
 };
 
 static const char* vertexSource =
 "#version 150\n"
 "\n"
 "in vec2 position;\n"
+"in vec3 color;\n"
+"out vec3 Color;\n"
 "\n"
 "\n"
 "void main()\n"
 "{\n"
+"    Color = color;\n"
 "    gl_Position = vec4(position, 0.0, 1.0);\n"
 "}\n";
 
 static const char* fragmentSource =
 "#version 150\n"
 "\n"
+"in vec3 Color;\n"
 "uniform vec3 triangleColor;\n"
 "\n"
 "out vec4 outColor;\n"
 "\n"
 "void main()\n"
 "{\n"
-"    outColor = vec4(triangleColor, 1.0);\n"
+"    outColor = vec4(Color, 1.0);\n"
 "}\n";
 char clog[2014];
 GLuint vbo;
@@ -119,10 +123,14 @@ void init()
     glLinkProgram(shaderProgram);
     glUseProgram(shaderProgram);
     
-    //attrib
+    //attributes
     GLint posAttrib = glGetAttribLocation(shaderProgram, "position");
     glEnableVertexAttribArray(posAttrib);
-    glVertexAttribPointer(posAttrib, 2, GL_FLOAT, GL_FALSE, 0, 0);
+    glVertexAttribPointer(posAttrib, 2, GL_FLOAT, GL_FALSE, 5*sizeof(float), 0);
+    GLint colAttrib = glGetAttribLocation(shaderProgram, "color");
+    glEnableVertexAttribArray(colAttrib);
+    glVertexAttribPointer(colAttrib, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), (GLvoid*)(2*sizeof(float)));
+    
     
     uniColor = glGetUniformLocation(shaderProgram, "triangleColor");
     glUniform3f(uniColor, 1.0f, 0.0f, 0.0f);
