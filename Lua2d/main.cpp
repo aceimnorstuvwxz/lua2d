@@ -44,7 +44,13 @@ const char * myChunkReader(lua_State* L, void* data, size_t* size)
 float vertices[] = {
     0.0f, 0.5f, 1.0f, 0.0f, 0.0f,
     0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
-    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f
+    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f,
+    1.0f, 0.5f, 0.0f, 1.0f, 1.0f
+};
+
+GLuint elements[] = {
+    0,1,2,
+    0,1,3
 };
 
 static const char* vertexSource =
@@ -76,6 +82,7 @@ static const char* fragmentSource =
 char clog[2014];
 GLuint vbo;
 GLuint vao;
+GLuint ebo;
 GLint uniColor;
 GLuint textureId;
 decltype(std::chrono::high_resolution_clock::now()) t_start;
@@ -91,6 +98,10 @@ void init()
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    
+    glGenBuffers(1, &ebo);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(elements), elements, GL_STATIC_DRAW);
     
     //shaders
     GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -149,7 +160,8 @@ void display()
     glUniform3f(uniColor, (sin(time * 4.0f) + 1.0f) / 2.0f, 0.0f, 0.0f);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+//    glDrawArrays(GL_TRIANGLES, 0, 3);
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
     glutSwapBuffers();
     sleep(0.33);
     glutPostRedisplay();
