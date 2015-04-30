@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\lua53">
+      <UniqueIdentifier>{15bc979f-464d-4ab4-af1f-7562e3606482}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Lua2d\Director.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\ImageSprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\Layer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua2d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\Node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lapi.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lauxlib.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lbaselib.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lbitlib.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lcode.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lcorolib.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lctype.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\ldblib.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\ldebug.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\ldo.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\ldump.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lfunc.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lgc.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\linit.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\liolib.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\llex.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lmathlib.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lmem.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\loadlib.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lobject.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lopcodes.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\loslib.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lparser.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lstate.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lstring.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lstrlib.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\ltable.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\ltablib.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\ltm.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lua.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\luac.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lundump.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lutf8lib.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lvm.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Lua2d\lua53\lzio.c">
+      <Filter>Source Files\lua53</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Lua2d\Director.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\ImageSprite.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\Layer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua2d.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\Node.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\Scene.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\Sprite.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\utils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lapi.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lauxlib.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lcode.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lctype.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\ldebug.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\ldo.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lfunc.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lgc.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\llex.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\llimits.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lmem.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lobject.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lopcodes.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lparser.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lprefix.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lstate.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lstring.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\ltable.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\ltm.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lua.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lua.hpp">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\luaconf.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lualib.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lundump.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lvm.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lua2d\lua53\lzio.h">
+      <Filter>Source Files\lua53</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

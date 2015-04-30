@@ -6,19 +6,21 @@
 //  Copyright (c) 2015年 chenbingfeng. All rights reserved.
 //
 #include <math.h>
-#include <unistd.h>
+#include <windows.h>
 
 #include <iostream>
 #include <chrono>
 
-#include <GLUT/GLUT.h>
-#include <OpenGL/gl3.h>
+#include <gl\GL.h>
+#include <gl\glu.h>
+
+#include "lua2d.h"
 
 extern "C" {
 
-#include "lua.h"
-#include "lauxlib.h"
-#include "lualib.h"
+#include "lua53/lua.h"
+#include "lua53/lauxlib.h"
+#include "lua53/lualib.h"
 
 }
 
@@ -168,7 +170,6 @@ void display()
 
 void reshape(int w, int h)
 {
-    
 }
 
 void myGlTestCode()
@@ -188,8 +189,8 @@ void myGlTestCode()
     glutMainLoop();
 }
 
-int main(int argc, const char * argv[]) {
-    
+bool lua_test()
+{
     lua_State * L = luaL_newstate();
     if (L == NULL) {
         std::cerr << "cannot create state: not enough memory." << std::endl;
@@ -215,6 +216,25 @@ int main(int argc, const char * argv[]) {
     std::cout << res<< std::endl;
     lua_close(L);
     
-    myGlTestCode();
+    return EXIT_SUCCESS;
+}
+static l2d::Scene scene;
+static l2d::Layer layer;
+static l2d::ImageSprite imageSprite("img.png", 100, 100);
+
+static void lua2d_demo()
+{
+    auto director = l2d::Director::getInstance();
+    director.runWithScene(scene);
+}
+
+int main(int argc, const char * argv[])
+{
+//    lua_test();
+//    myGlTestCode();
+
+    std::cout << "hello world!" << std::endl;
+    lua2d_demo();
+
     return 0;
 }

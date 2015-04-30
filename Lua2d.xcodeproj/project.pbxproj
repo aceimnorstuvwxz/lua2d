@@ -46,6 +46,13 @@
 		B582DD481AE8DB79007E7471 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B582DD471AE8DB79007E7471 /* GLUT.framework */; };
 		B582DD4A1AE8DB7F007E7471 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B582DD491AE8DB7F007E7471 /* OpenGL.framework */; };
 		B582DD4D1AE8DCD8007E7471 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B582DD4B1AE8DCD8007E7471 /* utils.cpp */; };
+		B5E02F341AEE6B25003DA260 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E02F321AEE6B25003DA260 /* Node.cpp */; };
+		B5E02F371AEE6BAA003DA260 /* Director.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E02F351AEE6BAA003DA260 /* Director.cpp */; };
+		B5E02F3A1AEE7158003DA260 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E02F381AEE7158003DA260 /* Scene.cpp */; };
+		B5E02F3D1AEE719A003DA260 /* lua2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E02F3B1AEE719A003DA260 /* lua2d.cpp */; };
+		B5E02F401AEE78E9003DA260 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E02F3E1AEE78E9003DA260 /* Layer.cpp */; };
+		B5E02F431AEE7EF6003DA260 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E02F411AEE7EF6003DA260 /* Sprite.cpp */; };
+		B5E02F461AEE818B003DA260 /* ImageSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E02F441AEE818B003DA260 /* ImageSprite.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -128,6 +135,20 @@
 		B582DD491AE8DB7F007E7471 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		B582DD4B1AE8DCD8007E7471 /* utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
 		B582DD4C1AE8DCD8007E7471 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		B5E02F321AEE6B25003DA260 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		B5E02F331AEE6B25003DA260 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		B5E02F351AEE6BAA003DA260 /* Director.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Director.cpp; sourceTree = "<group>"; };
+		B5E02F361AEE6BAA003DA260 /* Director.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Director.h; sourceTree = "<group>"; };
+		B5E02F381AEE7158003DA260 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		B5E02F391AEE7158003DA260 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		B5E02F3B1AEE719A003DA260 /* lua2d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua2d.cpp; sourceTree = "<group>"; };
+		B5E02F3C1AEE719A003DA260 /* lua2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua2d.h; sourceTree = "<group>"; };
+		B5E02F3E1AEE78E9003DA260 /* Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
+		B5E02F3F1AEE78E9003DA260 /* Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layer.h; sourceTree = "<group>"; };
+		B5E02F411AEE7EF6003DA260 /* Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sprite.cpp; sourceTree = "<group>"; };
+		B5E02F421AEE7EF6003DA260 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
+		B5E02F441AEE818B003DA260 /* ImageSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageSprite.cpp; sourceTree = "<group>"; };
+		B5E02F451AEE818B003DA260 /* ImageSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSprite.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +189,20 @@
 				B582DCDD1AE8D0B5007E7471 /* main.cpp */,
 				B582DD4B1AE8DCD8007E7471 /* utils.cpp */,
 				B582DD4C1AE8DCD8007E7471 /* utils.h */,
+				B5E02F321AEE6B25003DA260 /* Node.cpp */,
+				B5E02F331AEE6B25003DA260 /* Node.h */,
+				B5E02F351AEE6BAA003DA260 /* Director.cpp */,
+				B5E02F361AEE6BAA003DA260 /* Director.h */,
+				B5E02F381AEE7158003DA260 /* Scene.cpp */,
+				B5E02F391AEE7158003DA260 /* Scene.h */,
+				B5E02F3B1AEE719A003DA260 /* lua2d.cpp */,
+				B5E02F3C1AEE719A003DA260 /* lua2d.h */,
+				B5E02F3E1AEE78E9003DA260 /* Layer.cpp */,
+				B5E02F3F1AEE78E9003DA260 /* Layer.h */,
+				B5E02F411AEE7EF6003DA260 /* Sprite.cpp */,
+				B5E02F421AEE7EF6003DA260 /* Sprite.h */,
+				B5E02F441AEE818B003DA260 /* ImageSprite.cpp */,
+				B5E02F451AEE818B003DA260 /* ImageSprite.h */,
 			);
 			path = Lua2d;
 			sourceTree = "<group>";
@@ -304,14 +339,18 @@
 				B582DD3A1AE8D8B3007E7471 /* lstate.c in Sources */,
 				B582DD331AE8D8B3007E7471 /* lmathlib.c in Sources */,
 				B582DD3E1AE8D8B3007E7471 /* ltablib.c in Sources */,
+				B5E02F3A1AEE7158003DA260 /* Scene.cpp in Sources */,
 				B582DD2A1AE8D8B3007E7471 /* ldblib.c in Sources */,
 				B582DD3B1AE8D8B3007E7471 /* lstring.c in Sources */,
 				B582DD3F1AE8D8B3007E7471 /* ltm.c in Sources */,
+				B5E02F341AEE6B25003DA260 /* Node.cpp in Sources */,
 				B582DD301AE8D8B3007E7471 /* linit.c in Sources */,
+				B5E02F461AEE818B003DA260 /* ImageSprite.cpp in Sources */,
 				B582DD441AE8D8B3007E7471 /* lvm.c in Sources */,
 				B582DD3D1AE8D8B3007E7471 /* ltable.c in Sources */,
 				B582DD311AE8D8B3007E7471 /* liolib.c in Sources */,
 				B582DD281AE8D8B3007E7471 /* lcorolib.c in Sources */,
+				B5E02F431AEE7EF6003DA260 /* Sprite.cpp in Sources */,
 				B582DD431AE8D8B3007E7471 /* lutf8lib.c in Sources */,
 				B582DD451AE8D8B3007E7471 /* lzio.c in Sources */,
 				B582DCDE1AE8D0B5007E7471 /* main.cpp in Sources */,
@@ -321,11 +360,13 @@
 				B582DD401AE8D8B3007E7471 /* lua.c in Sources */,
 				B582DD251AE8D8B3007E7471 /* lbaselib.c in Sources */,
 				B582DD2D1AE8D8B3007E7471 /* ldump.c in Sources */,
+				B5E02F3D1AEE719A003DA260 /* lua2d.cpp in Sources */,
 				B582DD321AE8D8B3007E7471 /* llex.c in Sources */,
 				B582DD231AE8D8B3007E7471 /* lapi.c in Sources */,
 				B582DD2B1AE8D8B3007E7471 /* ldebug.c in Sources */,
 				B582DD371AE8D8B3007E7471 /* lopcodes.c in Sources */,
 				B582DD271AE8D8B3007E7471 /* lcode.c in Sources */,
+				B5E02F401AEE78E9003DA260 /* Layer.cpp in Sources */,
 				B582DD4D1AE8DCD8007E7471 /* utils.cpp in Sources */,
 				B582DD391AE8D8B3007E7471 /* lparser.c in Sources */,
 				B582DD261AE8D8B3007E7471 /* lbitlib.c in Sources */,
@@ -333,6 +374,7 @@
 				B582DD351AE8D8B3007E7471 /* loadlib.c in Sources */,
 				B582DD241AE8D8B3007E7471 /* lauxlib.c in Sources */,
 				B582DD341AE8D8B3007E7471 /* lmem.c in Sources */,
+				B5E02F371AEE6BAA003DA260 /* Director.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
