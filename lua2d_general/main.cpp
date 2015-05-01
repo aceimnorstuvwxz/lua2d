@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 chenbingfeng. All rights reserved.
 //
 #include <math.h>
-#include <windows.h>
+#include <unistd.h>
 
 #include <iostream>
 #include <chrono>
 
-#include <gl\GL.h>
-#include <gl\glu.h>
+#include <GLUT/GLUT.h>
+#include <OpenGL/gl3.h>
 
 #include "lua2d.h"
 
@@ -220,12 +220,19 @@ bool lua_test()
 }
 static l2d::Scene scene;
 static l2d::Layer layer;
-static l2d::ImageSprite imageSprite("img.png", 100, 100);
+static l2d::ImageSprite imageSprite("shooting_arrow.png", 100, 100);
 
 static void lua2d_demo()
 {
-    auto director = l2d::Director::getInstance();
-    director.runWithScene(scene);
+//    auto director = l2d::Director::getInstance();
+//    director.runWithScene(&scene);
+    l2d::Renderer renderer;
+    renderer.initContext(800, 600);
+    while (true) {
+        LOG("test draw");
+        renderer.testDraw();
+        sleep(1);
+    }
 }
 
 int main(int argc, const char * argv[])

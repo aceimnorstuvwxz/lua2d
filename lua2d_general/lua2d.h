@@ -11,11 +11,13 @@
 
 #include <stdio.h>
 
+#include "Renderer.h"
 #include "Node.h"
 #include "Director.h"
 #include "Scene.h"
 #include "Layer.h"
 #include "Sprite.h"
 #include "ImageSprite.h"
+
 
 #endif /* defined(__Lua2d__lua2d__) */

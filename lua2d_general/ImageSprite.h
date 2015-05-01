@@ -21,11 +21,12 @@ namespace l2d
         // image display size, could be different from raw size
         int _w; // image width
         int _h; // image height
+        std::string _fileName;
         
     public:
         ImageSprite(const std::string& fileName, const int& width, const int& height);
 
-        void draw();
+        virtual void draw();
     };
 }
 

@@ -46,6 +46,7 @@
 		B582DD481AE8DB79007E7471 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B582DD471AE8DB79007E7471 /* GLUT.framework */; };
 		B582DD4A1AE8DB7F007E7471 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B582DD491AE8DB7F007E7471 /* OpenGL.framework */; };
 		B582DD4D1AE8DCD8007E7471 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B582DD4B1AE8DCD8007E7471 /* utils.cpp */; };
+		B58902DC1AF279CC0003D3DF /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B58902DA1AF279CC0003D3DF /* Renderer.cpp */; };
 		B5E02F341AEE6B25003DA260 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E02F321AEE6B25003DA260 /* Node.cpp */; };
 		B5E02F371AEE6BAA003DA260 /* Director.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E02F351AEE6BAA003DA260 /* Director.cpp */; };
 		B5E02F3A1AEE7158003DA260 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E02F381AEE7158003DA260 /* Scene.cpp */; };
@@ -135,6 +136,8 @@
 		B582DD491AE8DB7F007E7471 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		B582DD4B1AE8DCD8007E7471 /* utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
 		B582DD4C1AE8DCD8007E7471 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		B58902DA1AF279CC0003D3DF /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		B58902DB1AF279CC0003D3DF /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 		B5E02F321AEE6B25003DA260 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
 		B5E02F331AEE6B25003DA260 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		B5E02F351AEE6BAA003DA260 /* Director.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Director.cpp; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				B5E02F421AEE7EF6003DA260 /* Sprite.h */,
 				B5E02F441AEE818B003DA260 /* ImageSprite.cpp */,
 				B5E02F451AEE818B003DA260 /* ImageSprite.h */,
+				B58902DA1AF279CC0003D3DF /* Renderer.cpp */,
+				B58902DB1AF279CC0003D3DF /* Renderer.h */,
 			);
 			path = Lua2d;
 			sourceTree = "<group>";
@@ -367,6 +372,7 @@
 				B582DD371AE8D8B3007E7471 /* lopcodes.c in Sources */,
 				B582DD271AE8D8B3007E7471 /* lcode.c in Sources */,
 				B5E02F401AEE78E9003DA260 /* Layer.cpp in Sources */,
+				B58902DC1AF279CC0003D3DF /* Renderer.cpp in Sources */,
 				B582DD4D1AE8DCD8007E7471 /* utils.cpp in Sources */,
 				B582DD391AE8D8B3007E7471 /* lparser.c in Sources */,
 				B582DD261AE8D8B3007E7471 /* lbitlib.c in Sources */,
