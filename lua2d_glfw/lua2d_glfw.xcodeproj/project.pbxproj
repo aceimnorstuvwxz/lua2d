@@ -64,6 +64,15 @@
 		B5F8E2D51AF518A500A0EA48 /* Framebuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2D31AF518A500A0EA48 /* Framebuffer.cpp */; };
 		B5F8E2DB1AF5206F00A0EA48 /* GC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2D91AF5206E00A0EA48 /* GC.cpp */; };
 		B5F8E2DE1AF5235400A0EA48 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2DC1AF5235400A0EA48 /* Texture.cpp */; };
+		B5F8E2E41AF5424D00A0EA48 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2E21AF5424D00A0EA48 /* Shader.cpp */; };
+		B5F8E2E71AF5447000A0EA48 /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2E51AF5447000A0EA48 /* Program.cpp */; };
+		B5F8E2EA1AF6074B00A0EA48 /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2E81AF6074B00A0EA48 /* VertexArray.cpp */; };
+		B5F8E2ED1AF6086A00A0EA48 /* VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2EB1AF6086A00A0EA48 /* VertexBuffer.cpp */; };
+		B5F8E2F01AF60D0700A0EA48 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2EE1AF60D0700A0EA48 /* Image.cpp */; };
+		B5F8E2FC1AF60E1500A0EA48 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2F21AF60E1500A0EA48 /* image_DXT.c */; };
+		B5F8E2FD1AF60E1500A0EA48 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2F41AF60E1500A0EA48 /* image_helper.c */; };
+		B5F8E2FE1AF60E1500A0EA48 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2F61AF60E1500A0EA48 /* SOIL.c */; };
+		B5F8E2FF1AF60E1500A0EA48 /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2F81AF60E1500A0EA48 /* stb_image_aug.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -205,6 +214,26 @@
 		B5F8E2DA1AF5206F00A0EA48 /* GC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GC.h; path = cppgl/GC.h; sourceTree = "<group>"; };
 		B5F8E2DC1AF5235400A0EA48 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = cppgl/Texture.cpp; sourceTree = "<group>"; };
 		B5F8E2DD1AF5235400A0EA48 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = cppgl/Texture.h; sourceTree = "<group>"; };
+		B5F8E2E21AF5424D00A0EA48 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = cppgl/Shader.cpp; sourceTree = "<group>"; };
+		B5F8E2E31AF5424D00A0EA48 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = cppgl/Shader.h; sourceTree = "<group>"; };
+		B5F8E2E51AF5447000A0EA48 /* Program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Program.cpp; path = cppgl/Program.cpp; sourceTree = "<group>"; };
+		B5F8E2E61AF5447000A0EA48 /* Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Program.h; path = cppgl/Program.h; sourceTree = "<group>"; };
+		B5F8E2E81AF6074B00A0EA48 /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexArray.cpp; path = cppgl/VertexArray.cpp; sourceTree = "<group>"; };
+		B5F8E2E91AF6074B00A0EA48 /* VertexArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VertexArray.h; path = cppgl/VertexArray.h; sourceTree = "<group>"; };
+		B5F8E2EB1AF6086A00A0EA48 /* VertexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexBuffer.cpp; path = cppgl/VertexBuffer.cpp; sourceTree = "<group>"; };
+		B5F8E2EC1AF6086A00A0EA48 /* VertexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VertexBuffer.h; path = cppgl/VertexBuffer.h; sourceTree = "<group>"; };
+		B5F8E2EE1AF60D0700A0EA48 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Image.cpp; path = cppgl/Image.cpp; sourceTree = "<group>"; };
+		B5F8E2EF1AF60D0700A0EA48 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = cppgl/Image.h; sourceTree = "<group>"; };
+		B5F8E2F21AF60E1500A0EA48 /* image_DXT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = cppgl/SOIL/image_DXT.c; sourceTree = "<group>"; };
+		B5F8E2F31AF60E1500A0EA48 /* image_DXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = image_DXT.h; path = cppgl/SOIL/image_DXT.h; sourceTree = "<group>"; };
+		B5F8E2F41AF60E1500A0EA48 /* image_helper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = cppgl/SOIL/image_helper.c; sourceTree = "<group>"; };
+		B5F8E2F51AF60E1500A0EA48 /* image_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = image_helper.h; path = cppgl/SOIL/image_helper.h; sourceTree = "<group>"; };
+		B5F8E2F61AF60E1500A0EA48 /* SOIL.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SOIL.c; path = cppgl/SOIL/SOIL.c; sourceTree = "<group>"; };
+		B5F8E2F71AF60E1500A0EA48 /* SOIL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOIL.h; path = cppgl/SOIL/SOIL.h; sourceTree = "<group>"; };
+		B5F8E2F81AF60E1500A0EA48 /* stb_image_aug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stb_image_aug.c; path = cppgl/SOIL/stb_image_aug.c; sourceTree = "<group>"; };
+		B5F8E2F91AF60E1500A0EA48 /* stb_image_aug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stb_image_aug.h; path = cppgl/SOIL/stb_image_aug.h; sourceTree = "<group>"; };
+		B5F8E2FA1AF60E1500A0EA48 /* stbi_DDS_aug_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stbi_DDS_aug_c.h; path = cppgl/SOIL/stbi_DDS_aug_c.h; sourceTree = "<group>"; };
+		B5F8E2FB1AF60E1500A0EA48 /* stbi_DDS_aug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stbi_DDS_aug.h; path = cppgl/SOIL/stbi_DDS_aug.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,19 +382,30 @@
 		B5F8E2871AF4DCD900A0EA48 /* cppgl */ = {
 			isa = PBXGroup;
 			children = (
+				B5F8E2881AF4DD0500A0EA48 /* cppgl.cpp */,
+				B5F8E2891AF4DD0500A0EA48 /* cppgl.h */,
+				B5F8E2AE1AF4E97100A0EA48 /* glm */,
+				B5F8E2F11AF60D1400A0EA48 /* SOIL */,
+				B5F8E2EE1AF60D0700A0EA48 /* Image.cpp */,
+				B5F8E2EF1AF60D0700A0EA48 /* Image.h */,
+				B5F8E2CA1AF4EB0D00A0EA48 /* utils.cpp */,
+				B5F8E2CB1AF4EB0D00A0EA48 /* utils.h */,
 				B5F8E2D91AF5206E00A0EA48 /* GC.cpp */,
 				B5F8E2DA1AF5206F00A0EA48 /* GC.h */,
 				B5F8E2CD1AF4EE6300A0EA48 /* Context.cpp */,
 				B5F8E2CE1AF4EE6300A0EA48 /* Context.h */,
 				B5F8E2D31AF518A500A0EA48 /* Framebuffer.cpp */,
 				B5F8E2D41AF518A500A0EA48 /* Framebuffer.h */,
+				B5F8E2E51AF5447000A0EA48 /* Program.cpp */,
+				B5F8E2E61AF5447000A0EA48 /* Program.h */,
+				B5F8E2E21AF5424D00A0EA48 /* Shader.cpp */,
+				B5F8E2E31AF5424D00A0EA48 /* Shader.h */,
 				B5F8E2DC1AF5235400A0EA48 /* Texture.cpp */,
 				B5F8E2DD1AF5235400A0EA48 /* Texture.h */,
-				B5F8E2AE1AF4E97100A0EA48 /* glm */,
-				B5F8E2881AF4DD0500A0EA48 /* cppgl.cpp */,
-				B5F8E2891AF4DD0500A0EA48 /* cppgl.h */,
-				B5F8E2CA1AF4EB0D00A0EA48 /* utils.cpp */,
-				B5F8E2CB1AF4EB0D00A0EA48 /* utils.h */,
+				B5F8E2E81AF6074B00A0EA48 /* VertexArray.cpp */,
+				B5F8E2E91AF6074B00A0EA48 /* VertexArray.h */,
+				B5F8E2EB1AF6086A00A0EA48 /* VertexBuffer.cpp */,
+				B5F8E2EC1AF6086A00A0EA48 /* VertexBuffer.h */,
 			);
 			name = cppgl;
 			sourceTree = "<group>";
@@ -402,6 +442,23 @@
 				B5F8E2C91AF4E98800A0EA48 /* vector_relational.hpp */,
 			);
 			name = glm;
+			sourceTree = "<group>";
+		};
+		B5F8E2F11AF60D1400A0EA48 /* SOIL */ = {
+			isa = PBXGroup;
+			children = (
+				B5F8E2F21AF60E1500A0EA48 /* image_DXT.c */,
+				B5F8E2F31AF60E1500A0EA48 /* image_DXT.h */,
+				B5F8E2F41AF60E1500A0EA48 /* image_helper.c */,
+				B5F8E2F51AF60E1500A0EA48 /* image_helper.h */,
+				B5F8E2F61AF60E1500A0EA48 /* SOIL.c */,
+				B5F8E2F71AF60E1500A0EA48 /* SOIL.h */,
+				B5F8E2F81AF60E1500A0EA48 /* stb_image_aug.c */,
+				B5F8E2F91AF60E1500A0EA48 /* stb_image_aug.h */,
+				B5F8E2FA1AF60E1500A0EA48 /* stbi_DDS_aug_c.h */,
+				B5F8E2FB1AF60E1500A0EA48 /* stbi_DDS_aug.h */,
+			);
+			name = SOIL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,6 +519,7 @@
 			files = (
 				B5F8E27A1AF3694A00A0EA48 /* ImageSprite.cpp in Sources */,
 				B5F8E24D1AF3690400A0EA48 /* lfunc.c in Sources */,
+				B5F8E2FC1AF60E1500A0EA48 /* image_DXT.c in Sources */,
 				B5F8E2551AF3690400A0EA48 /* lobject.c in Sources */,
 				B5F8E2D51AF518A500A0EA48 /* Framebuffer.cpp in Sources */,
 				B5F8E27D1AF3694A00A0EA48 /* Node.cpp in Sources */,
@@ -485,7 +543,10 @@
 				B5F8E2471AF3690400A0EA48 /* lcorolib.c in Sources */,
 				B5F8E27E1AF3694A00A0EA48 /* Renderer.cpp in Sources */,
 				B5F8E2DE1AF5235400A0EA48 /* Texture.cpp in Sources */,
+				B5F8E2EA1AF6074B00A0EA48 /* VertexArray.cpp in Sources */,
+				B5F8E2ED1AF6086A00A0EA48 /* VertexBuffer.cpp in Sources */,
 				B5F8E2621AF3690400A0EA48 /* lutf8lib.c in Sources */,
+				B5F8E2E41AF5424D00A0EA48 /* Shader.cpp in Sources */,
 				B5F8E2641AF3690400A0EA48 /* lzio.c in Sources */,
 				B5F8E2481AF3690400A0EA48 /* lctype.c in Sources */,
 				B5F8E27B1AF3694A00A0EA48 /* Layer.cpp in Sources */,
@@ -507,8 +568,13 @@
 				B5F8E2451AF3690400A0EA48 /* lbitlib.c in Sources */,
 				B5F8E27C1AF3694A00A0EA48 /* lua2d.cpp in Sources */,
 				B5F8E2601AF3690400A0EA48 /* luac.c in Sources */,
+				B5F8E2FF1AF60E1500A0EA48 /* stb_image_aug.c in Sources */,
 				B5F8E2791AF3694A00A0EA48 /* Director.cpp in Sources */,
+				B5F8E2FE1AF60E1500A0EA48 /* SOIL.c in Sources */,
+				B5F8E2E71AF5447000A0EA48 /* Program.cpp in Sources */,
+				B5F8E2FD1AF60E1500A0EA48 /* image_helper.c in Sources */,
 				B5F8E2541AF3690400A0EA48 /* loadlib.c in Sources */,
+				B5F8E2F01AF60D0700A0EA48 /* Image.cpp in Sources */,
 				B5F8E2431AF3690400A0EA48 /* lauxlib.c in Sources */,
 				B5F8E2531AF3690400A0EA48 /* lmem.c in Sources */,
 			);

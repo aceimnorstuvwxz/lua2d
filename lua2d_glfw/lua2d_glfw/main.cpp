@@ -24,6 +24,7 @@ extern "C" {
 }
 
 #include "utils.h"
+#include "cppgl/cppgl.h"
 
 static const char s_luachuck[] = "print(\"I am inside chunk!\")\
 return 123";
@@ -215,7 +216,7 @@ int main(int argc, const char * argv[])
 {
 
     std::cout << "hello world!" << std::endl;
-    lua2d_demo();
-
+//    lua2d_demo();
+    cppgl::cppgl_test();
     return 0;
 }

@@ -14,4 +14,19 @@
 
 #include "utils.h"
 
+#include "Image.h"
+#include "Context.h"
+#include "Framebuffer.h"
+#include "Program.h"
+#include "Shader.h"
+#include "Texture.h"
+#include "VertexArray.h"
+#include "VertexBuffer.h"
+
+NS_CPPGL_BEGIN
+
+void cppgl_test();
+
+NS_CPPGL_END
+
 #endif /* defined(__lua2d_glfw__cppgl__) */

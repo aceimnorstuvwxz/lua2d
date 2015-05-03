@@ -11,6 +11,7 @@
 
 #include "utils.h"
 #include "GC.h"
+#include "Image.h"
 
 NS_CPPGL_BEGIN
 
@@ -172,7 +173,6 @@ namespace Filter
         LinearMipmapLinear = GL_LINEAR_MIPMAP_LINEAR
     };
 }
-class Image;
 class Texture
 {
 public:

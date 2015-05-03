@@ -10,6 +10,10 @@
 #define __lua2d_glfw__Context__
 
 #include "utils.h"
+#include "Program.h"
+#include "VertexBuffer.h"
+#include "VertexArray.h"
+#include "Framebuffer.h"
 
 NS_CPPGL_BEGIN
 
@@ -56,7 +60,33 @@ namespace Capability
         DepthTest = GL_DEPTH_TEST,
         StencilTest = GL_STENCIL_TEST,
         CullFace = GL_CULL_FACE,
-        RasterizerDiscard = GL_RASTERIZER_DISCARD
+        RasterizerDiscard = GL_RASTERIZER_DISCARD,
+        Blend = GL_BLEND
+    };
+}
+
+namespace BlendFactor {
+    enum blend_factor_t
+    {
+        ZERO = GL_ZERO,
+        ONE = GL_ONE,
+        SRC_COLOR = GL_SRC_COLOR,
+        ONE_MINUS_SRC_COLOR = GL_ONE_MINUS_SRC_COLOR,
+        DST_COLOR = GL_DST_COLOR,
+        ONE_MINUS_DST_COLOR = GL_ONE_MINUS_DST_COLOR,
+        SRC_ALPHA = GL_SRC_ALPHA,
+        ONE_MINUS_SRC_ALPHA = GL_ONE_MINUS_SRC_ALPHA,
+        DST_ALPHA = GL_DST_ALPHA,
+        ONE_MINUS_DST_ALPHA = GL_ONE_MINUS_DST_ALPHA,
+        CONSTANT_COLOR = GL_CONSTANT_COLOR,
+        ONE_MINUS_CONSTANT_COLOR = GL_ONE_MINUS_CONSTANT_COLOR,
+        CONST_ALPHA = GL_CONSTANT_ALPHA,
+        ONE_MINUS_CONSTANT_ALPHA = GL_ONE_MINUS_CONSTANT_ALPHA,
+        SRC_ALPHA_SATURATE = GL_SRC_ALPHA_SATURATE,
+        SRC1_COLOR = GL_SRC1_COLOR,
+        ONE_MINUS_SRC1_COLOR = GL_ONE_MINUS_SRC1_COLOR,
+        SRC1_ALPHA = GL_SRC1_ALPHA,
+        ONE_MINUS_SRC1_ALPHA = GL_ONE_MINUS_SRC1_ALPHA
     };
 }
 
@@ -111,6 +141,8 @@ public:
     void clearColor(const Color& col);
     void clear(Buffer::buffer_t buffers = Buffer::Color | Buffer::Depth);
 
+    void blendFunc(BlendFactor::blend_factor_t sfactor, BlendFactor::blend_factor_t dfactor);
+
     void depthMask(bool writeEnabled);
     void stencilMask(bool writeEnabled);
     void stencilMask(unsigned int mask);
@@ -133,6 +165,8 @@ public:
 
 //    float time();
 
+    long getCurrentMicroseconds();
+    void sleepMicroseconds(long microseconds);
     static Context useExistingContext();
 
     ~Context();

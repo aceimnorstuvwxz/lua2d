@@ -43,22 +43,22 @@ Framebuffer::Framebuffer(unsigned int width, unsigned int height, unsigned char 
     glBindFramebuffer(GL_DRAW_FRAMEBUFFER, obj);
 
     // Create texture to hold color buffer
-    texColor.Image2D( 0, DataType::UnsignedByte, Format::RGBA, width, height, colorFormat );
-    texColor.SetWrapping( GL::Wrapping::ClampEdge, GL::Wrapping::ClampEdge );
-    texColor.SetFilters( GL::Filter::Linear, GL::Filter::Linear );
+    texColor.image2D( 0, DataType::UnsignedByte, Format::RGBA, width, height, colorFormat );
+    texColor.setWrapping( Wrapping::ClampEdge, Wrapping::ClampEdge );
+    texColor.setFilters( Filter::Linear, Filter::Linear );
     glFramebufferTexture2D( GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, texColor, 0 );
 
     // Create renderbuffer to hold depth buffer
     if ( depth > 0 ) {
         glBindTexture( GL_TEXTURE_2D, texDepth );
         glTexImage2D( GL_TEXTURE_2D, 0, depthFormat, width, height, 0, GL_DEPTH_COMPONENT, GL_UNSIGNED_BYTE, 0 );
-        texDepth.SetWrapping( GL::Wrapping::ClampEdge, GL::Wrapping::ClampEdge );
-        texDepth.SetFilters( GL::Filter::Nearest, GL::Filter::Nearest );
+        texDepth.setWrapping( Wrapping::ClampEdge, Wrapping::ClampEdge );
+        texDepth.setFilters( Filter::Nearest, Filter::Nearest );
         glFramebufferTexture2D( GL_DRAW_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, texDepth, 0 );
     }
 
     // Check
-    assert(glCheckFramebufferStatus( GL_DRAW_FRAMEBUFFER ) != GL_FRAMEBUFFER_COMPLETE ) );
+    assert(glCheckFramebufferStatus( GL_DRAW_FRAMEBUFFER ) != GL_FRAMEBUFFER_COMPLETE );
 
     POP_STATE();
 }

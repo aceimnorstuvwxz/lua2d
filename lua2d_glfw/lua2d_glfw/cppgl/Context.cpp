@@ -8,6 +8,8 @@
 
 #include "Context.h"
 #include <sys/time.h>
+#include <chrono>
+#include <thread>
 
 NS_CPPGL_BEGIN
 
@@ -32,6 +34,11 @@ void Context::clearColor(const Color& col)
 void Context::clear(Buffer::buffer_t buffers)
 {
     glClear(buffers);
+}
+
+void Context::blendFunc(BlendFactor::blend_factor_t sfactor, BlendFactor::blend_factor_t dfactor)
+{
+    glBlendFunc(sfactor, dfactor);
 }
 
 void Context::depthMask(bool writeEnabled)
@@ -119,6 +126,17 @@ void Context::drawElements(const VertexArray& vao, Primitive::primitive_t mode, 
 //
 //    return time.tv_sec - timeOffset.tv_sec + ( time.tv_usec - timeOffset.tv_usec ) / 1000000.0f;
 //}
+long Context::getCurrentMicroseconds()
+{
+//    auto tp = std::chrono::steady_clock::now();
+    return 0;
+}
+
+void Context::sleepMicroseconds(long microseconds)
+{
+
+}
+
 
 Context Context::useExistingContext()
 {
