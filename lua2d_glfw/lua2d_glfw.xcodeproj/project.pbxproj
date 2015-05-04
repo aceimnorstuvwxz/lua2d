@@ -62,7 +62,6 @@
 		B5F8E2CC1AF4EB0D00A0EA48 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2CA1AF4EB0D00A0EA48 /* utils.cpp */; };
 		B5F8E2CF1AF4EE6300A0EA48 /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2CD1AF4EE6300A0EA48 /* Context.cpp */; };
 		B5F8E2D51AF518A500A0EA48 /* Framebuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2D31AF518A500A0EA48 /* Framebuffer.cpp */; };
-		B5F8E2DB1AF5206F00A0EA48 /* GC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2D91AF5206E00A0EA48 /* GC.cpp */; };
 		B5F8E2DE1AF5235400A0EA48 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2DC1AF5235400A0EA48 /* Texture.cpp */; };
 		B5F8E2E41AF5424D00A0EA48 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2E21AF5424D00A0EA48 /* Shader.cpp */; };
 		B5F8E2E71AF5447000A0EA48 /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2E51AF5447000A0EA48 /* Program.cpp */; };
@@ -210,8 +209,6 @@
 		B5F8E2CE1AF4EE6300A0EA48 /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Context.h; path = cppgl/Context.h; sourceTree = "<group>"; };
 		B5F8E2D31AF518A500A0EA48 /* Framebuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Framebuffer.cpp; path = cppgl/Framebuffer.cpp; sourceTree = "<group>"; };
 		B5F8E2D41AF518A500A0EA48 /* Framebuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Framebuffer.h; path = cppgl/Framebuffer.h; sourceTree = "<group>"; };
-		B5F8E2D91AF5206E00A0EA48 /* GC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GC.cpp; path = cppgl/GC.cpp; sourceTree = "<group>"; };
-		B5F8E2DA1AF5206F00A0EA48 /* GC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GC.h; path = cppgl/GC.h; sourceTree = "<group>"; };
 		B5F8E2DC1AF5235400A0EA48 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = cppgl/Texture.cpp; sourceTree = "<group>"; };
 		B5F8E2DD1AF5235400A0EA48 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = cppgl/Texture.h; sourceTree = "<group>"; };
 		B5F8E2E21AF5424D00A0EA48 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = cppgl/Shader.cpp; sourceTree = "<group>"; };
@@ -390,8 +387,6 @@
 				B5F8E2EF1AF60D0700A0EA48 /* Image.h */,
 				B5F8E2CA1AF4EB0D00A0EA48 /* utils.cpp */,
 				B5F8E2CB1AF4EB0D00A0EA48 /* utils.h */,
-				B5F8E2D91AF5206E00A0EA48 /* GC.cpp */,
-				B5F8E2DA1AF5206F00A0EA48 /* GC.h */,
 				B5F8E2CD1AF4EE6300A0EA48 /* Context.cpp */,
 				B5F8E2CE1AF4EE6300A0EA48 /* Context.h */,
 				B5F8E2D31AF518A500A0EA48 /* Framebuffer.cpp */,
@@ -557,7 +552,6 @@
 				B5F8E2831AF369E800A0EA48 /* main.cpp in Sources */,
 				B5F8E24C1AF3690400A0EA48 /* ldump.c in Sources */,
 				B5F8E2CF1AF4EE6300A0EA48 /* Context.cpp in Sources */,
-				B5F8E2DB1AF5206F00A0EA48 /* GC.cpp in Sources */,
 				B5F8E2511AF3690400A0EA48 /* llex.c in Sources */,
 				B5F8E2421AF3690400A0EA48 /* lapi.c in Sources */,
 				B5F8E27F1AF3694A00A0EA48 /* Scene.cpp in Sources */,

@@ -187,7 +187,7 @@ bool lua_test()
     if (lua_isfunction(L, -1 )) {
         std:: cout << "top is function"<<std::endl;
     } else {
-        std::cout << "top is not function"  <<std::endl;
+        std::cout << "top is not function" <<std::endl;
     }
     
     //call the chunk

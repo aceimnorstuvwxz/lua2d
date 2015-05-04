@@ -19,7 +19,7 @@ inline void LogRecursive(std::ostream& os){}
 template<typename T, typename... Args>
 void LogRecursive(std::ostream& os, T first, const Args&... rest)
 {
-    os << first;
+    os << first << " ";
     LogRecursive(os, rest...);
 }
 
