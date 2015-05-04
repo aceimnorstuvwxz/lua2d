@@ -15,24 +15,34 @@
 
 #include "Node.h"
 #include "Layer.h"
+#include "Renderer.h"
 #include "utils.h"
 
 NS_L2D_BEGIN
-    class Scene :public Node
-    {
-    public:
-        // resume the scene, all layer will be resumed.
-        void resume();
-        
-        // pause the scene, all layer will be paused.
-        void pause();
-        
-        // add a layer with a zOrder
-        void addLayer(std::shared_ptr<Layer> layer, const int zOrder);
 
-        void draw();
-    private:
-        std::vector<std::shared_ptr<Layer>> _layers;
-    };
+class Scene;
+typedef std::shared_ptr<Scene> SPScene;
+
+class Scene :public Node
+{
+public:
+    static SPScene create();
+
+    // resume the scene, all layer will be resumed.
+    void resume();
+
+    // pause the scene, all layer will be paused.
+    void pause();
+
+    // add a layer with a zOrder
+    void addLayer(SPLayer layer, const int zOrder);
+
+    void draw(SPRenderer& renderer);
+private:
+    Scene();
+
+    std::vector<SPLayer> _layers;
+};
+
 NS_L2D_END
 #endif /* defined(__Lua2d__Scene__) */

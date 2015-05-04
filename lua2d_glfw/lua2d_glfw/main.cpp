@@ -216,7 +216,7 @@ int main(int argc, const char * argv[])
 {
 
     std::cout << "hello world!" << std::endl;
-//    lua2d_demo();
-    cppgl::cppgl_test();
+    lua2d_demo();
+//    cppgl::cppgl_test();
     return 0;
 }

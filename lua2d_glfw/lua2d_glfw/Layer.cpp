@@ -11,6 +11,14 @@
 
 NS_L2D_BEGIN
 
+
+SPLayer Layer::create()
+{
+    return SPLayer(new Layer());
+}
+
+Layer::Layer(){}
+
 void Layer::resume()
 {
 
@@ -21,14 +29,16 @@ void Layer::pause()
 
 }
 
-void Layer::addSprite(std::shared_ptr<Sprite> sprite)
+void Layer::addSprite(SPSprite& sprite)
 {
     _sprites.push_back(sprite);
 }
 
-void Layer::draw()
+void Layer::draw(SPRenderer& renderer)
 {
-    std::for_each(_sprites.begin(), _sprites.end(), std::mem_fn(&Sprite::draw));
+    for (auto iter = _sprites.begin(); iter != _sprites.end(); iter++) {
+        (*iter)->draw(renderer);
+    }
 }
 
 NS_L2D_END

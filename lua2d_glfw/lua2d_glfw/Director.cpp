@@ -31,10 +31,11 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
     }
 }
 
-void Director::init(const int width, const int height)
+void Director::init(int width, int height, const std::string& appName)
 {
     _width = width;
     _height = height;
+    _appName = appName;
 
     // init glfw window
     glfwSetErrorCallback(glfw_error_callback);
@@ -61,14 +62,20 @@ void Director::init(const int width, const int height)
 
     // init renderer
     _renderer = std::make_shared<Renderer>();
-    _renderer->init(_width, _height);
+    _renderer->init(_width, _height, _appName);
 };
 
-void Director::runWithScene(std::shared_ptr<Scene> scene)
+void Director::runWithScene(SPScene scene)
 {
     LOG("runWithScene");
     _scene = scene;
 }
+
+//cppgl::SPContext& Director::getContext()
+//{
+////    return _renderer->
+//}
+
 // millisecond 毫秒 microsecond微秒 nonosecond纳秒
 long getCurrentMicroSecond()
 {
@@ -86,12 +93,12 @@ void Director::mainLoop()
     {
         long lastTime = getCurrentMicroSecond();
 
-        _renderer->drawScene(_scene);
+        _renderer->getContext()->clear();
+        _scene->draw(_renderer);
         glfwSwapBuffers(_glfwWindow);
         glfwPollEvents();
 
         long curTime = getCurrentMicroSecond();
-        //            LOG("execution time=", curTime - lastTime, " frameInterval=", _frameInterval);
 
         if (curTime - lastTime < _frameInterval){
             usleep(static_cast<useconds_t>((_frameInterval - curTime + lastTime)));//usleep在微秒工作

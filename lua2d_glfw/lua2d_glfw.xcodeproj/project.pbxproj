@@ -356,22 +356,22 @@
 			children = (
 				B5F8E2771AF3694A00A0EA48 /* utils.cpp */,
 				B5F8E2781AF3694A00A0EA48 /* utils.h */,
-				B5F8E2671AF3694A00A0EA48 /* Director.cpp */,
-				B5F8E2681AF3694A00A0EA48 /* Director.h */,
-				B5F8E2691AF3694A00A0EA48 /* ImageSprite.cpp */,
-				B5F8E26A1AF3694A00A0EA48 /* ImageSprite.h */,
-				B5F8E26B1AF3694A00A0EA48 /* Layer.cpp */,
-				B5F8E26C1AF3694A00A0EA48 /* Layer.h */,
 				B5F8E26D1AF3694A00A0EA48 /* lua2d.cpp */,
 				B5F8E26E1AF3694A00A0EA48 /* lua2d.h */,
 				B5F8E26F1AF3694A00A0EA48 /* Node.cpp */,
 				B5F8E2701AF3694A00A0EA48 /* Node.h */,
+				B5F8E2671AF3694A00A0EA48 /* Director.cpp */,
+				B5F8E2681AF3694A00A0EA48 /* Director.h */,
 				B5F8E2711AF3694A00A0EA48 /* Renderer.cpp */,
 				B5F8E2721AF3694A00A0EA48 /* Renderer.h */,
 				B5F8E2731AF3694A00A0EA48 /* Scene.cpp */,
 				B5F8E2741AF3694A00A0EA48 /* Scene.h */,
+				B5F8E26B1AF3694A00A0EA48 /* Layer.cpp */,
+				B5F8E26C1AF3694A00A0EA48 /* Layer.h */,
 				B5F8E2751AF3694A00A0EA48 /* Sprite.cpp */,
 				B5F8E2761AF3694A00A0EA48 /* Sprite.h */,
+				B5F8E2691AF3694A00A0EA48 /* ImageSprite.cpp */,
+				B5F8E26A1AF3694A00A0EA48 /* ImageSprite.h */,
 			);
 			name = lua2d;
 			sourceTree = "<group>";

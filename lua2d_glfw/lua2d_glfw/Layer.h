@@ -15,20 +15,27 @@
 #include <stdio.h>
 #include "Node.h"
 #include "Sprite.h"
+#include "Renderer.h"
 #include "utils.h"
 
 NS_L2D_BEGIN
 
+class Layer;
+typedef std::shared_ptr<Layer> SPLayer;
+
 class Layer :public Node
 {
 public:
+    static SPLayer create();
+
     void resume();
     void pause();
-    void addSprite(std::shared_ptr<Sprite> sprite);
-    void draw();
+    void addSprite(SPSprite& sprite);
+    void draw(SPRenderer& renderer);
 
 private:
-    std::vector<std::shared_ptr<Sprite>> _sprites;
+    Layer();
+    std::vector<SPSprite> _sprites;
 };
 
 NS_L2D_END

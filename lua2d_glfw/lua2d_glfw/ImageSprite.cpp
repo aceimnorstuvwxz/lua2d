@@ -7,31 +7,92 @@
 //
 
 #include "ImageSprite.h"
-
 #include <OpenGl/gl3.h>
-
 #include "utils.h"
 
 NS_L2D_BEGIN
 
-ImageSprite::ImageSprite(const std::string& fileName, const int& width, const int& height):_fileName(fileName), _w(width),_h(height)
+SPImageSprite ImageSprite::create(const std::string &fileName, int width, int height)
 {
-    //nothing to do
+    if (!_initedStatic) initStatic();
+    return SPImageSprite(new ImageSprite(fileName, width, height));
+}
+
+ImageSprite::ImageSprite(const std::string& fileName, int width, int height):
+_fileName(fileName), _width(width),_height(height)
+{
+    //empty
 }
 
 void ImageSprite::load()
 {
+    if (_loaded) LOG("ImageSprite", _fileName, "already loaded");
+    assert(!_loaded);
 
-
+    auto image = cppgl::Image::create(_fileName);
+    image->load();
+    _texture = cppgl::Texture::create(image);
+    _texture->setWrapping(cppgl::Wrapping::Repeat, cppgl::Wrapping::Repeat);
+    _texture->setFilters(cppgl::Filter::Linear, cppgl::Filter::Linear);
 }
 
-void ImageSprite::draw()
+void ImageSprite::draw(SPRenderer& renderer)
 {
     LOG("ImageSprite::draw()");
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
-    //    glDrawArrays(GL_TRIANGLES, 0, 3);
-    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    auto context = renderer->getContext();
+    context->drawArrays(*_vao, cppgl::Primitive::Triangles, 0, 6);
+}
+
+//static area
+bool ImageSprite::_initedStatic = false;
+
+void ImageSprite::initStatic()
+{
+    _initedStatic = true;
+    const char* vertexSource =
+    "#version 150\n"
+    "\n"
+    "in vec2 position;\n"
+    "in vec2 texcoord;\n"
+    "out vec2 Texcoord;\n"
+    "\n"
+    "\n"
+    "void main()\n"
+    "{\n"
+    "    Texcoord = vec2(texcoord.x, -texcoord.y);\n"
+    "    gl_Position = vec4(position.x, position.y, 0.0, 1.0);\n"
+    "}\n";
+
+    const char* fragmentSource =
+    "#version 150\n"
+    "\n"
+    "in vec2 Texcoord;\n"
+    "\n"
+    "out vec4 outColor;\n"
+    "uniform sampler2D tex;\n"
+    "\n"
+    "void main()\n"
+    "{\n"
+    "    outColor = texture(tex, Texcoord);\n"
+    "}\n";
+
+    auto vert = cppgl::Shader::create(cppgl::ShaderType::Vertex, vertexSource);
+    auto frag = cppgl::Shader::create(cppgl::ShaderType::Fragment, fragmentSource);
+    _program = cppgl::Program::create(vert, frag);
+
+    float vertices[] = {
+        -0.5f, -0.5f, 0.0f, 0.0f,
+        -0.5f, 0.5f, 0.0f, 1.0f,
+        0.5f, 0.5f, 1.0f, 1.0f,
+        0.5f, 0.5f, 1.0f, 1.0f,
+        0.5f, -0.5f, 1.0f, 0.0f,
+        -0.5f, -0.5f, 0.0f, 0.0f
+    };
+    _vbo = cppgl::VertexBuffer::create(vertices, sizeof(vertices), cppgl::BufferUsage::StaticDraw);
+
+    _vao = cppgl::VertexArray::create();
+    _vao->bindAttribute(_program->getAttribute("position"), *_vbo, cppgl::Type::Float, 2, 4*sizeof(float), NULL);
+    _vao->bindAttribute(_program->getAttribute("texcoord"), *_vbo, cppgl::Type::Float, 2, 4*sizeof(float), 2*sizeof(float));
 }
 
 NS_L2D_END

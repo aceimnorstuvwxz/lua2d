@@ -8,41 +8,46 @@
 
 #include "Sprite.h"
 
-namespace l2d{
+NS_L2D_BEGIN
 
-    void Sprite::hide()
-    {
-        _isVisible = false;
-    }
-    
-    void Sprite::show()
-    {
-        _isVisible = true;
-    }
-    
-    void Sprite::setX(int x)
-    {
-        _x = x;
-    }
-    
-    void Sprite::setY(int y)
-    {
-        _y = y;
-    }
-    
-    void Sprite::setZ(int z)
-    {
-        _z = z;
-    }
-    
-    void Sprite::rotate(int degree)
-    {
-        _rotate = degree;
-    }
+void Sprite::hide()
+{
+    _isVisible = false;
+}
 
-    void Sprite::setAlpha(float alpha)
-    {
-        _alpha = alpha;
-    }
-    
-}//namespace
+void Sprite::show()
+{
+    _isVisible = true;
+}
+
+void Sprite::setX(int x)
+{
+    _x = x;
+}
+
+void Sprite::setY(int y)
+{
+    _y = y;
+}
+
+void Sprite::setZ(int z)
+{
+    _z = z;
+}
+
+void Sprite::rotate(int degree)
+{
+    _rotate = degree;
+}
+
+void Sprite::setAlpha(float alpha)
+{
+    _alpha = alpha;
+}
+
+void Sprite::scale(float scaler)
+{
+    _scale = scaler;
+}
+
+NS_L2D_END

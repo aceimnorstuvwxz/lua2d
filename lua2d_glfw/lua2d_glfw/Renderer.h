@@ -9,23 +9,37 @@
 #ifndef __Lua2d__Renderer__
 #define __Lua2d__Renderer__
 
+#include <memory>
+#include <string>
+
+#include "utils.h"
 #include <GLFW/glfw3.h>
 #include <stdio.h>
 #include "Scene.h"
+#include "cppgl/cppgl.h"
 
-namespace l2d
+NS_L2D_BEGIN
+
+class Renderer;
+typedef std::shared_ptr<Renderer> SPRenderer;
+
+class Renderer
 {
-    class Renderer
-    {
-    public:
-        void init(int width, int height);
-        void drawScene(std::shared_ptr<Scene> scene);
-        void testDraw();
+public:
+    static SPRenderer create();
 
-    private:
-        int _width;
-        int _height;
-    };
-}
+    void init(int width, int height, const std::string& titile);
+    int getWidth();
+    int getHeight();
+    cppgl::SPContext getContext();
+
+private:
+    Renderer();
+    int _width;
+    int _height;
+    cppgl::SPContext _context;
+};
+
+NS_L2D_END
 
 #endif /* defined(__Lua2d__Renderer__) */

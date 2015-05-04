@@ -12,19 +12,28 @@
 
 NS_L2D_BEGIN
 
+SPScene Scene::create()
+{
+    return SPScene(new Scene());
+}
+
 void Scene::resume(){};
 
 void Scene::pause(){};
 
-void Scene::addLayer(std::shared_ptr<Layer> layer, const int zOrder)
+void Scene::addLayer(SPLayer layer, const int zOrder)
 {
     _layers.push_back(layer);
     //TODO zOrder
 };
 
-void Scene::draw()
+Scene::Scene(){}
+
+void Scene::draw(SPRenderer& renderer)
 {
-    std::for_each(_layers.begin(), _layers.end(), std::mem_fn(&Layer::draw));
+    for(auto iter = _layers.begin(); iter != _layers.end(); iter++){
+        (*iter)->draw(renderer);
+    }
 }
 
 NS_L2D_END
