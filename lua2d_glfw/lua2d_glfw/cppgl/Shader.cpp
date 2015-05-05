@@ -71,7 +71,7 @@ void Shader::compile()
     glGetShaderiv( _obj, GL_COMPILE_STATUS, &res );
 
     if (res != GL_TRUE) {
-        LOG(getInfoLog());
+        CLOG(getInfoLog());
         _compiled = false;
     } else {
         _compiled = true;

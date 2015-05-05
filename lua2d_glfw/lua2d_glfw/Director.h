@@ -45,7 +45,6 @@ private:
     //window context
     GLFWwindow* _glfwWindow;
     long _frameInterval = 1.0f/60.0f*1000.0f*1000.0f; // microsecond
-
 };
 
 NS_L2D_END

@@ -22,13 +22,14 @@
 NS_L2D_BEGIN
 
 class Layer;
-typedef std::shared_ptr<Layer> SPLayer;
 class Sprite;
 class Renderer;
 class ImageSprite;
+typedef std::shared_ptr<Layer> SPLayer;
 typedef std::shared_ptr<Sprite> SPSprite;
 typedef std::shared_ptr<Renderer> SPRenderer;
 typedef std::shared_ptr<ImageSprite> SPImageSprite;
+
 class Layer :public Node
 {
 public:

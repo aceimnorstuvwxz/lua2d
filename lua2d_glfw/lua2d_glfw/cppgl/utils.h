@@ -65,7 +65,7 @@ inline const float* color_ptr(const Color& color)
     return glm::value_ptr(color);
 }
 
-#define LOG(...) Log(__FILE__, __FUNCTION__, __LINE__, __VA_ARGS__)
+#define CLOG(...) Log(__FILE__, __FUNCTION__, __LINE__, __VA_ARGS__)
 
 inline void LogRecursive(std::ostream& os){}
 

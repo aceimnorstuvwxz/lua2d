@@ -99,7 +99,7 @@ void Program::link()
     glGetProgramiv( _obj, GL_LINK_STATUS, &res );
 
     if (res != GL_TRUE) {
-        LOG("link failed, ", getInfoLog());
+        CLOG("link failed, ", getInfoLog());
         _linked = false;
     } else {
         _linked = true;
