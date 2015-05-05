@@ -11,17 +11,9 @@
 #include <sys/time.h>
 
 NS_L2D_BEGIN
-
-Director Director::_instance;
-
-Director& Director::getInstance()
-{
-    return Director::_instance;
-};
-
 static void glfw_error_callback(int error, const char* description)
 {
-    LOG("GLFW error: ", description);
+    std::cerr << "GLFW error: " << description << std::endl;
 }
 
 static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -30,18 +22,14 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
         glfwSetWindowShouldClose(window, GL_TRUE);
     }
 }
-
-void Director::init(int width, int height, const std::string& appName)
+GLFWwindow* makeContext(int width, int height, const std::string& title)
 {
-    _width = width;
-    _height = height;
-    _appName = appName;
-
-    // init glfw window
+    // using GLFW to generate window and GL context
+    GLFWwindow* glfwWindow;
     glfwSetErrorCallback(glfw_error_callback);
 
     if (!glfwInit()){
-        LOG("GLFW init failed.");
+        std::cerr << "GLFW init failed" << std::endl;
         exit(EXIT_FAILURE);
     }
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -49,19 +37,36 @@ void Director::init(int width, int height, const std::string& appName)
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    _glfwWindow = glfwCreateWindow(width, height, "Lua2d", NULL, NULL);
-    if (!_glfwWindow){
+    glfwWindow = glfwCreateWindow(width, height, title.c_str(), NULL, NULL);
+    if (!glfwWindow){
         glfwTerminate();
         exit(EXIT_FAILURE);
     }
 
-    glfwMakeContextCurrent(_glfwWindow);
+    glfwMakeContextCurrent(glfwWindow);
     glfwSwapInterval(1);
 
-    glfwSetKeyCallback(_glfwWindow, glfw_key_callback);
+    glfwSetKeyCallback(glfwWindow, glfw_key_callback);
+
+    return glfwWindow;
+}
+Director Director::_instance;
+
+Director& Director::getInstance()
+{
+    return Director::_instance;
+};
+
+void Director::init(int width, int height, const std::string& appName)
+{
+    _width = width;
+    _height = height;
+    _appName = appName;
+
+    _glfwWindow = makeContext(_width, _height, appName);
 
     // init renderer
-    _renderer = std::make_shared<Renderer>();
+    _renderer = Renderer::create();
     _renderer->init(_width, _height, _appName);
 };
 
@@ -70,11 +75,6 @@ void Director::runWithScene(SPScene scene)
     LOG("runWithScene");
     _scene = scene;
 }
-
-//cppgl::SPContext& Director::getContext()
-//{
-////    return _renderer->
-//}
 
 // millisecond 毫秒 microsecond微秒 nonosecond纳秒
 long getCurrentMicroSecond()
@@ -88,7 +88,6 @@ long getCurrentMicroSecond()
 }
 void Director::mainLoop()
 {
-
     while (!glfwWindowShouldClose(_glfwWindow))
     {
         long lastTime = getCurrentMicroSecond();

@@ -9,6 +9,7 @@
 #include "ImageSprite.h"
 #include <OpenGl/gl3.h>
 #include "utils.h"
+#include <iostream>
 
 NS_L2D_BEGIN
 
@@ -38,8 +39,9 @@ void ImageSprite::load()
 
 void ImageSprite::draw(SPRenderer& renderer)
 {
-    LOG("ImageSprite::draw()");
     auto context = renderer->getContext();
+    context->useProgram(_program);
+    context->bindTexture(_texture, 0);
     context->drawArrays(*_vao, cppgl::Primitive::Triangles, 0, 6);
 }
 
@@ -89,10 +91,13 @@ void ImageSprite::initStatic()
         -0.5f, -0.5f, 0.0f, 0.0f
     };
     _vbo = cppgl::VertexBuffer::create(vertices, sizeof(vertices), cppgl::BufferUsage::StaticDraw);
-
     _vao = cppgl::VertexArray::create();
     _vao->bindAttribute(_program->getAttribute("position"), *_vbo, cppgl::Type::Float, 2, 4*sizeof(float), NULL);
     _vao->bindAttribute(_program->getAttribute("texcoord"), *_vbo, cppgl::Type::Float, 2, 4*sizeof(float), 2*sizeof(float));
 }
+
+cppgl::SPVertexArray ImageSprite::_vao;
+cppgl::SPVertexBuffer ImageSprite::_vbo;
+cppgl::SPProgram ImageSprite::_program;
 
 NS_L2D_END

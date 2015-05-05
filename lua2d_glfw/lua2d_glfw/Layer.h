@@ -12,17 +12,23 @@
 #include <vector>
 #include <memory>
 
-#include <stdio.h>
+
+#include "utils.h"
 #include "Node.h"
 #include "Sprite.h"
+#include "ImageSprite.h"
 #include "Renderer.h"
-#include "utils.h"
 
 NS_L2D_BEGIN
 
 class Layer;
 typedef std::shared_ptr<Layer> SPLayer;
-
+class Sprite;
+class Renderer;
+class ImageSprite;
+typedef std::shared_ptr<Sprite> SPSprite;
+typedef std::shared_ptr<Renderer> SPRenderer;
+typedef std::shared_ptr<ImageSprite> SPImageSprite;
 class Layer :public Node
 {
 public:
@@ -31,11 +37,13 @@ public:
     void resume();
     void pause();
     void addSprite(SPSprite& sprite);
+    void addSprite(SPImageSprite& sprite);
     void draw(SPRenderer& renderer);
 
 private:
     Layer();
     std::vector<SPSprite> _sprites;
+    std::vector<SPImageSprite> _imageSprites;
 };
 
 NS_L2D_END

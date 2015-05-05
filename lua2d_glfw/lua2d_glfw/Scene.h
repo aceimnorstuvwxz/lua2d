@@ -22,7 +22,10 @@ NS_L2D_BEGIN
 
 class Scene;
 typedef std::shared_ptr<Scene> SPScene;
-
+class Renderer;
+typedef std::shared_ptr<Renderer> SPRenderer;
+class Layer;
+typedef std::shared_ptr<Layer> SPLayer;
 class Scene :public Node
 {
 public:

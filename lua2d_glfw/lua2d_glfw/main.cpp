@@ -201,13 +201,15 @@ bool lua_test()
 
 static void lua2d_demo()
 {
-    auto scene = std::make_shared<l2d::Scene>();
-    auto layer = std::make_shared<l2d::Layer>();
-    auto imageSprite = std::make_shared<l2d::ImageSprite>("shooting_arrow.png",71, 98);
     auto director = l2d::Director::getInstance();
+    director.init(142, 198, "appName");
+
+    auto scene = l2d::Scene::create();
+    auto layer = l2d::Layer::create();
+    auto imageSprite = l2d::ImageSprite::create("shooting_arrow.png",71, 98);
+    imageSprite->load();
     layer->addSprite(imageSprite);
     scene->addLayer(layer, 0);
-    director.init(800, 400);
     director.runWithScene(scene);
     director.mainLoop();
 }
