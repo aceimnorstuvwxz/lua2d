@@ -27,7 +27,7 @@ class ImageSprite :public Sprite
 public:
     static SPImageSprite create(const std::string& fileName, int width, int height);
     virtual void load() override;
-    virtual void draw(SPRenderer& renderer) override;
+    virtual void draw(SPRenderer renderer) override;
 
 private:
     ImageSprite(const std::string& fileName, int width, int height);

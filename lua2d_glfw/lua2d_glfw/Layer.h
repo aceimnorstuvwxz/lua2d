@@ -37,14 +37,12 @@ public:
 
     void resume();
     void pause();
-    void addSprite(SPSprite& sprite);
-    void addSprite(SPImageSprite& sprite);
-    void draw(SPRenderer& renderer);
+    void addSprite(SPSprite sprite);
+    void draw(SPRenderer renderer);
 
 private:
     Layer();
     std::vector<SPSprite> _sprites;
-    std::vector<SPImageSprite> _imageSprites;
 };
 
 NS_L2D_END

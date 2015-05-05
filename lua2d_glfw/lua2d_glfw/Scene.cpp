@@ -29,7 +29,7 @@ void Scene::addLayer(SPLayer layer, const int zOrder)
 
 Scene::Scene(){}
 
-void Scene::draw(SPRenderer& renderer)
+void Scene::draw(SPRenderer renderer)
 {
     for(auto iter = _layers.begin(); iter != _layers.end(); iter++){
         (*iter)->draw(renderer);

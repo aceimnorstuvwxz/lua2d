@@ -23,6 +23,7 @@
 #include "Image.h"
 #include "SOIL/SOIL.h"
 #include <iostream>
+#include "inter.h"
 
 NS_CPPGL_BEGIN
 

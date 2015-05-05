@@ -43,7 +43,7 @@ public:
     // add a layer with a zOrder
     void addLayer(SPLayer layer, const int zOrder);
 
-    void draw(SPRenderer& renderer);
+    void draw(SPRenderer renderer);
 private:
     Scene();
 

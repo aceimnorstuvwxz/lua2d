@@ -21,6 +21,7 @@
  */
 
 #include "Shader.h"
+#include "inter.h"
 #include <iostream>
 
 NS_CPPGL_BEGIN

@@ -72,6 +72,7 @@
 		B5F8E2FD1AF60E1500A0EA48 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2F41AF60E1500A0EA48 /* image_helper.c */; };
 		B5F8E2FE1AF60E1500A0EA48 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2F61AF60E1500A0EA48 /* SOIL.c */; };
 		B5F8E2FF1AF60E1500A0EA48 /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E2F81AF60E1500A0EA48 /* stb_image_aug.c */; };
+		B5F8E3151AF8C71900A0EA48 /* inter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E3131AF8C71900A0EA48 /* inter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -231,6 +232,8 @@
 		B5F8E2F91AF60E1500A0EA48 /* stb_image_aug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stb_image_aug.h; path = cppgl/SOIL/stb_image_aug.h; sourceTree = "<group>"; };
 		B5F8E2FA1AF60E1500A0EA48 /* stbi_DDS_aug_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stbi_DDS_aug_c.h; path = cppgl/SOIL/stbi_DDS_aug_c.h; sourceTree = "<group>"; };
 		B5F8E2FB1AF60E1500A0EA48 /* stbi_DDS_aug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stbi_DDS_aug.h; path = cppgl/SOIL/stbi_DDS_aug.h; sourceTree = "<group>"; };
+		B5F8E3131AF8C71900A0EA48 /* inter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = inter.cpp; path = cppgl/inter.cpp; sourceTree = "<group>"; };
+		B5F8E3141AF8C71900A0EA48 /* inter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inter.h; path = cppgl/inter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +404,8 @@
 				B5F8E2E91AF6074B00A0EA48 /* VertexArray.h */,
 				B5F8E2EB1AF6086A00A0EA48 /* VertexBuffer.cpp */,
 				B5F8E2EC1AF6086A00A0EA48 /* VertexBuffer.h */,
+				B5F8E3131AF8C71900A0EA48 /* inter.cpp */,
+				B5F8E3141AF8C71900A0EA48 /* inter.h */,
 			);
 			name = cppgl;
 			sourceTree = "<group>";
@@ -568,6 +573,7 @@
 				B5F8E2E71AF5447000A0EA48 /* Program.cpp in Sources */,
 				B5F8E2FD1AF60E1500A0EA48 /* image_helper.c in Sources */,
 				B5F8E2541AF3690400A0EA48 /* loadlib.c in Sources */,
+				B5F8E3151AF8C71900A0EA48 /* inter.cpp in Sources */,
 				B5F8E2F01AF60D0700A0EA48 /* Image.cpp in Sources */,
 				B5F8E2431AF3690400A0EA48 /* lauxlib.c in Sources */,
 				B5F8E2531AF3690400A0EA48 /* lmem.c in Sources */,

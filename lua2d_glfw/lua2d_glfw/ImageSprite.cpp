@@ -37,7 +37,7 @@ void ImageSprite::load()
     _texture->setFilters(cppgl::Filter::Linear, cppgl::Filter::Linear);
 }
 
-void ImageSprite::draw(SPRenderer& renderer)
+void ImageSprite::draw(SPRenderer renderer)
 {
     auto context = renderer->getContext();
     context->useProgram(_program);

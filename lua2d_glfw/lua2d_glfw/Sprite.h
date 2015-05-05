@@ -39,7 +39,7 @@ public:
     virtual void load() = 0;
 
     // draw in GL context.
-    virtual void draw(SPRenderer& renderer) = 0;
+    virtual void draw(SPRenderer renderer) = 0;
 
 protected:
     bool _isVisible;

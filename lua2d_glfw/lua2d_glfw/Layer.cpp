@@ -29,25 +29,25 @@ void Layer::pause()
 
 }
 
-void Layer::addSprite(SPSprite& sprite)
+void Layer::addSprite(SPSprite sprite)
 {
     _sprites.push_back(sprite);
 }
 
-void Layer::addSprite(SPImageSprite& sprite)
-{
-    _imageSprites.push_back(sprite);
-}
+//void Layer::addSprite(SPImageSprite& sprite)
+//{
+//    _sprites.push_back(sprite);
+//}
 
-void Layer::draw(SPRenderer& renderer)
+void Layer::draw(SPRenderer renderer)
 {
     for (auto iter = _sprites.begin(); iter != _sprites.end(); iter++) {
         (*iter)->draw(renderer);
     }
     
-    for (auto iter = _imageSprites.begin(); iter != _imageSprites.end(); iter++){
-        (*iter)->draw(renderer);
-    }
+//    for (auto iter = _imageSprites.begin(); iter != _imageSprites.end(); iter++){
+//        (*iter)->draw(renderer);
+//    }
 }
 
 NS_L2D_END
