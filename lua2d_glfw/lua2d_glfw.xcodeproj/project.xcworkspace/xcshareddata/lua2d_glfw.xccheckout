@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>665267EE-3F97-4C50-8AD1-44FFDBF17A9C</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>lua2d_glfw</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D0E2F84134133C3D884084C0C527259A27922C44</key>
 		<string>github.com:iichenbf/lua2d.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>lua2d_glfw/lua2d_glfw.xcodeproj/project.xcworkspace</string>
+	<string>lua2d_glfw/lua2d_glfw.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D0E2F84134133C3D884084C0C527259A27922C44</key>

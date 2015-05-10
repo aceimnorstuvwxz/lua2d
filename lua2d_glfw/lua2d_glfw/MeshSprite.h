@@ -20,33 +20,48 @@
  THE SOFTWARE.
  */
 
-#ifndef __Lua2d__utils__
-#define __Lua2d__utils__
+#ifndef __lua2d_glfw__MeshSprite__
+#define __lua2d_glfw__MeshSprite__
 
-#include <stdio.h>
-#include <iostream>
+#include <memory>
+#include <string>
 
-#define LOG(...) Log(__FILE__, __FUNCTION__, __LINE__, __VA_ARGS__)
+#include "utils.h"
+#include "Sprite.h"
+#include "Renderer.h"
+#include "cppgl/cppgl.h"
 
-inline void LogRecursive(std::ostream& os){}
+NS_L2D_BEGIN
 
-template<typename T, typename... Args>
-void LogRecursive(std::ostream& os, T first, const Args&... rest)
+class MeshSprite;
+typedef std::shared_ptr<MeshSprite> SPMeshSprite;
+
+class MeshSprite: public Sprite
 {
-    os << first << " ";
-    LogRecursive(os, rest...);
-}
+public:
+    static SPMeshSprite create(const std::string& obj_file, const std::string& tex_file);
+    virtual void load() override;
+    virtual void draw(SPRenderer reanderer) override;
 
-template<typename... Args>
-void Log(const char* file, const char* func, int line, const Args&... args)
-{
-    //std::cout << file <<":"<< "(" << line << ")"<< func<<": ";
-    std::cout << func << "/" << line << ": ";
-    LogRecursive(std::cout, args...);
-    std::cout << std::endl;
-}
+private:
+    MeshSprite(const std::string& obj_file, const std::string& tex_file);
 
-#define NS_L2D_BEGIN  namespace l2d{
-#define NS_L2D_END    }
+    std::string _objFile;
+    std::string _texFile;
+    bool _loaded = false;
 
-#endif /* defined(__Lua2d__utils__) */
+    cppgl::SPTexture _texture;
+    cppgl::SPMesh _mesh;
+
+    // MeshSprite share same VAO VBO and Program
+    static cppgl::SPVertexArray _vao;
+    static cppgl::SPVertexBuffer _vbo;
+    static cppgl::SPProgram  _program;
+
+    static void initStatic();
+    static bool _staticInited;
+};
+
+NS_L2D_END
+
+#endif /* defined(__lua2d_glfw__MeshSprite__) */

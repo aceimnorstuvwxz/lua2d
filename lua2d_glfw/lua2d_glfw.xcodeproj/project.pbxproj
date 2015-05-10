@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B50630B51AFF4525005C22F2 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50630B31AFF4525005C22F2 /* Mesh.cpp */; };
 		B5F8E1FB1AF367D900A0EA48 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F8E1FA1AF367D900A0EA48 /* OpenGL.framework */; };
 		B5F8E1FD1AF367DF00A0EA48 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F8E1FC1AF367DF00A0EA48 /* IOKit.framework */; };
 		B5F8E1FF1AF367E700A0EA48 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F8E1FE1AF367E700A0EA48 /* CoreVideo.framework */; };
@@ -88,6 +89,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B50630B31AFF4525005C22F2 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mesh.cpp; path = cppgl/Mesh.cpp; sourceTree = "<group>"; };
+		B50630B41AFF4525005C22F2 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = cppgl/Mesh.h; sourceTree = "<group>"; };
 		B5F8E1F01AF367C100A0EA48 /* lua2d_glfw */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lua2d_glfw; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F8E1FA1AF367D900A0EA48 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		B5F8E1FC1AF367DF00A0EA48 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -406,6 +409,8 @@
 				B5F8E2EC1AF6086A00A0EA48 /* VertexBuffer.h */,
 				B5F8E3131AF8C71900A0EA48 /* inter.cpp */,
 				B5F8E3141AF8C71900A0EA48 /* inter.h */,
+				B50630B31AFF4525005C22F2 /* Mesh.cpp */,
+				B50630B41AFF4525005C22F2 /* Mesh.h */,
 			);
 			name = cppgl;
 			sourceTree = "<group>";
@@ -533,6 +538,7 @@
 				B5F8E2521AF3690400A0EA48 /* lmathlib.c in Sources */,
 				B5F8E25D1AF3690400A0EA48 /* ltablib.c in Sources */,
 				B5F8E2491AF3690400A0EA48 /* ldblib.c in Sources */,
+				B50630B51AFF4525005C22F2 /* Mesh.cpp in Sources */,
 				B5F8E2CC1AF4EB0D00A0EA48 /* utils.cpp in Sources */,
 				B5F8E25A1AF3690400A0EA48 /* lstring.c in Sources */,
 				B5F8E25E1AF3690400A0EA48 /* ltm.c in Sources */,
@@ -705,6 +711,7 @@
 				B5F8E1F91AF367C100A0EA48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

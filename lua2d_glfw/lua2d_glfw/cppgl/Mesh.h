@@ -20,33 +20,40 @@
  THE SOFTWARE.
  */
 
-#ifndef __Lua2d__utils__
-#define __Lua2d__utils__
+#ifndef __lua2d_glfw__Mesh__
+#define __lua2d_glfw__Mesh__
 
-#include <stdio.h>
-#include <iostream>
+#include "utils.h"
+#include <memory>
+#include <string>
+#include <vector>
 
-#define LOG(...) Log(__FILE__, __FUNCTION__, __LINE__, __VA_ARGS__)
+NS_CPPGL_BEGIN
 
-inline void LogRecursive(std::ostream& os){}
-
-template<typename T, typename... Args>
-void LogRecursive(std::ostream& os, T first, const Args&... rest)
+struct Vertex
 {
-    os << first << " ";
-    LogRecursive(os, rest...);
-}
+    glm::vec3 position;
+    glm::vec2 texcoord;
+    glm::vec3 normal;
+};
 
-template<typename... Args>
-void Log(const char* file, const char* func, int line, const Args&... args)
+class Mesh;
+typedef std::shared_ptr<Mesh> SPMesh;
+
+class Mesh
 {
-    //std::cout << file <<":"<< "(" << line << ")"<< func<<": ";
-    std::cout << func << "/" << line << ": ";
-    LogRecursive(std::cout, args...);
-    std::cout << std::endl;
-}
+public:
+    static SPMesh create(const std::string& objfilename);
 
-#define NS_L2D_BEGIN  namespace l2d{
-#define NS_L2D_END    }
+    const Vertex* vertices() const;
+    std::size_t vertexCount() const;
 
-#endif /* defined(__Lua2d__utils__) */
+private:
+    Mesh(const std::string& objfilename);
+
+    std::vector<Vertex> _vertices;
+};
+
+NS_CPPGL_END
+
+#endif /* defined(__lua2d_glfw__Mesh__) */
