@@ -23,8 +23,6 @@
 #ifndef __Lua2d__lua2d__
 #define __Lua2d__lua2d__
 
-#include <stdio.h>
-
 #include "Renderer.h"
 #include "Node.h"
 #include "Director.h"

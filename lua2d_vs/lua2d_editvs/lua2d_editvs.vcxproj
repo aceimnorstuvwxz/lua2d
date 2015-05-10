@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E57019E8-CDFA-4682-BA4C-346B0888A78B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>lua2d_editvs</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Context.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\cppgl.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Framebuffer.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glew\glew.c" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glew\glewinfo.c" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glew\visualinfo.c" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Image.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\inter.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Mesh.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Program.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Shader.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\image_DXT.c" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\image_helper.c" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\SOIL.c" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\stb_image_aug.c" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Texture.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\utils.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\VertexArray.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\VertexBuffer.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\Director.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\ImageSprite.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\Layer.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\lua2d.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\main.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\MeshSprite.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\Node.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\Renderer.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\Scene.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\Sprite.cpp" />
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\utils.cpp" />
+    <ClCompile Include="main0.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Context.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\cppgl.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Framebuffer.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glew\glew.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glew\glxew.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glew\wglew.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\common.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\exponential.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\ext.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\fwd.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\geometric.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\glm.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\integer.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat2x2.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat2x3.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat2x4.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat3x2.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat3x3.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat3x4.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat4x2.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat4x3.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat4x4.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\matrix.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\packing.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\trigonometric.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\vec2.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\vec3.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\vec4.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\vector_relational.hpp" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Image.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\inter.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Mesh.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Program.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Shader.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\image_DXT.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\image_helper.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\SOIL.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\stbi_DDS_aug.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\stbi_DDS_aug_c.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\stb_image_aug.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Texture.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\utils.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\VertexArray.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\VertexBuffer.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\Director.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\ImageSprite.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\Layer.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\lua2d.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\MeshSprite.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\Node.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\Renderer.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\Scene.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\Sprite.h" />
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\CMakeLists.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -21,7 +21,6 @@
  */
 
 #include "ImageSprite.h"
-#include <OpenGl/gl3.h>
 #include <iostream>
 
 NS_L2D_BEGIN

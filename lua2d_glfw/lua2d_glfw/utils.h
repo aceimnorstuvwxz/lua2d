@@ -26,6 +26,12 @@
 #include <stdio.h>
 #include <iostream>
 
+//windows
+#include "cppgl\glew\glew.h"
+#include "GLFW/glfw3.h"
+#pragma comment(lib,"GLFW/glfw3.lib")
+
+
 #define LOG(...) Log(__FILE__, __FUNCTION__, __LINE__, __VA_ARGS__)
 
 inline void LogRecursive(std::ostream& os){}

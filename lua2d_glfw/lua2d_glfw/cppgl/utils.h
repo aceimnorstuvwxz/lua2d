@@ -26,13 +26,16 @@
 #define NS_CPPGL_BEGIN namespace cppgl {
 #define NS_CPPGL_END   }
 
+//#include <OpenGL/gl3.h>
+//#error glerdsfsd
+#include "glew/glew.h"
+
 // use glm as math lib, which is a header only library
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
 
-// opengl lib is a common
-#include <OpenGL/gl3.h>
+
 
 NS_CPPGL_BEGIN
 

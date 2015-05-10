@@ -22,7 +22,7 @@ THE SOFTWARE.
 
 #include "cppgl.h"
 
-#include <GLFW/glfw3.h>
+#include "../GLFW/glfw3.h"
 #include <iostream>
 #include <chrono>
 #include <thread>

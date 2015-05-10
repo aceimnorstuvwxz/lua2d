@@ -27,10 +27,11 @@
 #include <string>
 
 #include "utils.h"
-#include <GLFW/glfw3.h>
+
 #include <stdio.h>
 #include "Scene.h"
 #include "cppgl/cppgl.h"
+
 
 NS_L2D_BEGIN
 

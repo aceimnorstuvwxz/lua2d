@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\lua2d">
+      <UniqueIdentifier>{61dfce53-711e-48c8-8fab-2b86e4921343}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cppgl">
+      <UniqueIdentifier>{3a1c74f8-14c5-4dc4-9db3-3d7c79f3b527}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cppgl\glm">
+      <UniqueIdentifier>{6b7c06e3-222b-479f-aa9f-7a1fc358076a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cppgl\SOIL">
+      <UniqueIdentifier>{a79c4ca4-44b9-41de-bb50-e00dcb4bf047}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cppgl\glew">
+      <UniqueIdentifier>{8f7baa3f-6141-4a7b-bd74-bfb3f3894383}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\Director.cpp">
+      <Filter>Source Files\lua2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\ImageSprite.cpp">
+      <Filter>Source Files\lua2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\Layer.cpp">
+      <Filter>Source Files\lua2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\lua2d.cpp">
+      <Filter>Source Files\lua2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\main.cpp">
+      <Filter>Source Files\lua2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\MeshSprite.cpp">
+      <Filter>Source Files\lua2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\Node.cpp">
+      <Filter>Source Files\lua2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\Renderer.cpp">
+      <Filter>Source Files\lua2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\Scene.cpp">
+      <Filter>Source Files\lua2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\Sprite.cpp">
+      <Filter>Source Files\lua2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\utils.cpp">
+      <Filter>Source Files\lua2d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Context.cpp">
+      <Filter>Source Files\cppgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\cppgl.cpp">
+      <Filter>Source Files\cppgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Framebuffer.cpp">
+      <Filter>Source Files\cppgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Image.cpp">
+      <Filter>Source Files\cppgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\inter.cpp">
+      <Filter>Source Files\cppgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Mesh.cpp">
+      <Filter>Source Files\cppgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Program.cpp">
+      <Filter>Source Files\cppgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Shader.cpp">
+      <Filter>Source Files\cppgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Texture.cpp">
+      <Filter>Source Files\cppgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\utils.cpp">
+      <Filter>Source Files\cppgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\VertexArray.cpp">
+      <Filter>Source Files\cppgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\VertexBuffer.cpp">
+      <Filter>Source Files\cppgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\image_DXT.c">
+      <Filter>Source Files\cppgl\SOIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\image_helper.c">
+      <Filter>Source Files\cppgl\SOIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\SOIL.c">
+      <Filter>Source Files\cppgl\SOIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\stb_image_aug.c">
+      <Filter>Source Files\cppgl\SOIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glew\glew.c">
+      <Filter>Source Files\cppgl\glew</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glew\glewinfo.c">
+      <Filter>Source Files\cppgl\glew</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glew\visualinfo.c">
+      <Filter>Source Files\cppgl\glew</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\Director.h">
+      <Filter>Source Files\lua2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\ImageSprite.h">
+      <Filter>Source Files\lua2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\Layer.h">
+      <Filter>Source Files\lua2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\lua2d.h">
+      <Filter>Source Files\lua2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\MeshSprite.h">
+      <Filter>Source Files\lua2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\Node.h">
+      <Filter>Source Files\lua2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\Renderer.h">
+      <Filter>Source Files\lua2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\Scene.h">
+      <Filter>Source Files\lua2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\Sprite.h">
+      <Filter>Source Files\lua2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\utils.h">
+      <Filter>Source Files\lua2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Context.h">
+      <Filter>Source Files\cppgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\cppgl.h">
+      <Filter>Source Files\cppgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Framebuffer.h">
+      <Filter>Source Files\cppgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Image.h">
+      <Filter>Source Files\cppgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\inter.h">
+      <Filter>Source Files\cppgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Mesh.h">
+      <Filter>Source Files\cppgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Program.h">
+      <Filter>Source Files\cppgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Shader.h">
+      <Filter>Source Files\cppgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\Texture.h">
+      <Filter>Source Files\cppgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\utils.h">
+      <Filter>Source Files\cppgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\VertexArray.h">
+      <Filter>Source Files\cppgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\VertexBuffer.h">
+      <Filter>Source Files\cppgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\common.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\exponential.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\ext.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\fwd.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\geometric.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\glm.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\integer.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat2x2.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat2x3.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat2x4.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat3x2.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat3x3.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat3x4.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat4x2.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat4x3.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\mat4x4.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\matrix.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\packing.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\trigonometric.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\vec2.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\vec3.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\vec4.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\vector_relational.hpp">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\image_DXT.h">
+      <Filter>Source Files\cppgl\SOIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\image_helper.h">
+      <Filter>Source Files\cppgl\SOIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\SOIL.h">
+      <Filter>Source Files\cppgl\SOIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\stb_image_aug.h">
+      <Filter>Source Files\cppgl\SOIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\stbi_DDS_aug.h">
+      <Filter>Source Files\cppgl\SOIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\SOIL\stbi_DDS_aug_c.h">
+      <Filter>Source Files\cppgl\SOIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glew\glew.h">
+      <Filter>Source Files\cppgl\glew</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glew\glxew.h">
+      <Filter>Source Files\cppgl\glew</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glew\wglew.h">
+      <Filter>Source Files\cppgl\glew</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\lua2d_glfw\lua2d_glfw\cppgl\glm\CMakeLists.txt">
+      <Filter>Source Files\cppgl\glm</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

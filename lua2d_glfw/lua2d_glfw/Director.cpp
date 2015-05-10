@@ -21,8 +21,8 @@
  */
 
 #include "Director.h"
-#include <unistd.h>
-#include <sys/time.h>
+#include <chrono>
+#include <thread>
 
 NS_L2D_BEGIN
 static void glfw_error_callback(int error, const char* description)
@@ -90,34 +90,19 @@ void Director::runWithScene(SPScene scene)
     _scene = scene;
 }
 
-// millisecond 毫秒 microsecond微秒 nonosecond纳秒
-long getCurrentMicroSecond()
-{
-    long lLastTime = 0;
-    struct timeval stCurrentTime;
-
-    gettimeofday(&stCurrentTime,NULL);
-    lLastTime = stCurrentTime.tv_sec*1000+stCurrentTime.tv_usec*0.001;
-    return lLastTime;
-}
 void Director::mainLoop()
 {
+	std::chrono::microseconds frameInterval{ (long long)(1.0f / 60.0f * 1000.0f * 1000.0f) };
     while (!glfwWindowShouldClose(_glfwWindow))
     {
-        long lastTime = getCurrentMicroSecond();
-
+		auto last = std::chrono::steady_clock::now();
         _renderer->getContext()->clear();
         _scene->draw(_renderer);
         glfwSwapBuffers(_glfwWindow);
         glfwPollEvents();
 
-        long curTime = getCurrentMicroSecond();
-
-        if (curTime - lastTime < _frameInterval){
-            usleep(static_cast<useconds_t>((_frameInterval - curTime + lastTime)));//usleep在微秒工作
-        } else {
-            LOG("frame time overflow.");
-        }
+		auto now = std::chrono::steady_clock::now();
+		std::this_thread::sleep_for(frameInterval - (now - last));
     }
 
     glfwDestroyWindow(_glfwWindow);
