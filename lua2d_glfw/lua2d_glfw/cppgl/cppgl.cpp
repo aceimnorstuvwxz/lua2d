@@ -46,7 +46,7 @@ void makeContext()
     // using GLFW to generate window and GL context
     int width = 142;
     int height = 196;
-
+		
     // init glfw window
     glfwSetErrorCallback(glfw_error_callback);
 
@@ -55,9 +55,9 @@ void makeContext()
         exit(EXIT_FAILURE);
     }
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    //glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     _glfwWindow = glfwCreateWindow(width, height, "cppgl_test", NULL, NULL);
     if (!_glfwWindow){
@@ -101,6 +101,11 @@ static const char* fragmentSource =
 void cppgl_test()
 {
     makeContext();
+	auto err = glewInit();
+	if (err != GLEW_OK)
+	{
+		fprintf(stderr, "%d, Error: %s\n", err, glewGetErrorString(err));
+	}
     auto context = Context::Create();
     SPShader vert = Shader::create(ShaderType::Vertex, vertexSource);
     SPShader freg = Shader::create(ShaderType::Fragment, fragmentSource);

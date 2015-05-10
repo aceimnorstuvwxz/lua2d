@@ -1,5 +1,5 @@
 #include <iostream>
-int main()
+int main4()
 {
 	std::cout << "hello world£¡" << std::endl;
 	return 0;

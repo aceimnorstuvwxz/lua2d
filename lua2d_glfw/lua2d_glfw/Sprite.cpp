@@ -26,7 +26,7 @@ NS_L2D_BEGIN
 
 void Sprite::hide()
 {
-    _isVisible = false;
+	_isVisible = false;
 }
 
 void Sprite::show()

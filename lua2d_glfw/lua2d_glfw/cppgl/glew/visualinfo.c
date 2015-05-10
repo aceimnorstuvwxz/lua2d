@@ -33,9 +33,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <GL/glew.h>
+#include "glew.h"
 #if defined(_WIN32)
-#include <GL/wglew.h>
+#include "wglew.h"
 #elif defined(__APPLE__) && !defined(GLEW_APPLE_GLX)
 #include <AGL/agl.h>
 #elif !defined(__HAIKU__)
@@ -89,7 +89,7 @@ int visual = -1;
 FILE* file = 0;
 
 int 
-main (int argc, char** argv)
+main3 (int argc, char** argv)
 {
   GLenum err;
   GLContext ctx;
@@ -168,13 +168,13 @@ main (int argc, char** argv)
   fprintf(file, "OpenGL renderer string: %s\n", glGetString(GL_RENDERER));
   fprintf(file, "OpenGL version string: %s\n", glGetString(GL_VERSION));
   fprintf(file, "OpenGL extensions (GL_): \n");
-  PrintExtensions((const char*)glGetString(GL_EXTENSIONS));
+  //PrintExtensions((const char*)glGetString(GL_EXTENSIONS));
 
 #ifndef GLEW_NO_GLU
   /* GLU extensions */
-  fprintf(file, "GLU version string: %s\n", gluGetString(GLU_VERSION));
+ // fprintf(file, "GLU version string: %s\n", gluGetString(GLU_VERSION));
   fprintf(file, "GLU extensions (GLU_): \n");
-  PrintExtensions((const char*)gluGetString(GLU_EXTENSIONS));
+  //PrintExtensions((const char*)gluGetString(GLU_EXTENSIONS));
 #endif
 
   /* ---------------------------------------------------------------------- */

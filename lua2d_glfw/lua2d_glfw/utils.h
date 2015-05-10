@@ -27,9 +27,11 @@
 #include <iostream>
 
 //windows
+#pragma comment(lib, "opengl32.lib")
+#define GLEW_STATIC
 #include "cppgl\glew\glew.h"
 #include "GLFW/glfw3.h"
-#pragma comment(lib,"GLFW/glfw3.lib")
+#pragma comment(lib,"glfw3.lib")
 
 
 #define LOG(...) Log(__FILE__, __FUNCTION__, __LINE__, __VA_ARGS__)

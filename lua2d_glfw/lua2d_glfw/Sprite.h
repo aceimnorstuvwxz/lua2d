@@ -27,13 +27,10 @@
 
 #include "utils.h"
 #include "Node.h"
-#include "Renderer.h"
 
 NS_L2D_BEGIN
 
-class Sprite;
 class Renderer;
-typedef std::shared_ptr<Sprite> SPSprite;
 typedef std::shared_ptr<Renderer> SPRenderer;
 
 class Sprite :public Node

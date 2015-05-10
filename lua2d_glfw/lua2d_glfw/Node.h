@@ -23,12 +23,14 @@
 #ifndef __Lua2d__Node__
 #define __Lua2d__Node__
 
-#include <stdio.h>
-namespace l2d
+#include "utils.h"
+
+NS_L2D_BEGIN
+
+class Node
 {
-    class Node
-    {
-        
-    };
-}
+
+};
+
+NS_L2D_END
 #endif /* defined(__Lua2d__Node__) */
