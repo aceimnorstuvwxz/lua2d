@@ -18,28 +18,19 @@ static void lua2d_demo()
 
     auto scene = l2d::Scene::create();
     auto layer = l2d::Layer::create();
-    auto arrow = l2d::ImageSprite::create("shooting_arrow.png",71, 98);
-    arrow->load();
 
-    auto cube = l2d::MeshSprite::create("cube.obj", "cube.png");
-    cube->load();
     auto gaoda = l2d::MeshSprite::create("gaoda.obj", "gaoda.jpg");
     gaoda->load();
 
-    auto tank = l2d::MeshSprite::create("tank.obj", "tank.jpg");
-    tank->load();
-    arrow->setX(0.5f);
-    arrow->scale(1.5f);
-    arrow->rotate(-45.0f);
-    arrow->setZ(0.5f);
-    cube->scale(1.2f);
-
-    layer->addSprite(cube);
-    layer->addSprite(arrow);
-    layer->addSprite(gaoda);
-    layer->addSprite(tank);
+    gaoda->setX(0.5f);
+    gaoda->scale(1.5f);
+    gaoda->rotate(-45.0f);
+    gaoda->setZ(0.5f);
+    gaoda->scale(1.2f);
     gaoda->setY(-20.0f);
-
+    
+    layer->addSprite(gaoda);
+  
     scene->addLayer(layer, 0);
     director.runWithScene(scene);
     director.setProj(glm::radians(45.0f), 800.0f/600.0f, 1.0f, 100000.0f);
