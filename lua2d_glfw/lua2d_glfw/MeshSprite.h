@@ -41,7 +41,7 @@ class MeshSprite: public Sprite
 public:
     static SPMeshSprite create(const std::string& obj_file, const std::string& tex_file);
     virtual void load() override;
-    virtual void draw(SPRenderer reanderer) override;
+    virtual void draw(SPRenderer renderer) override;
 
 private:
     MeshSprite(const std::string& obj_file, const std::string& tex_file);
@@ -49,13 +49,13 @@ private:
     std::string _objFile;
     std::string _texFile;
     bool _loaded = false;
+    size_t _vertexCount;
 
     cppgl::SPTexture _texture;
-    cppgl::SPMesh _mesh;
+    cppgl::SPVertexBuffer _vbo;
+    cppgl::SPVertexArray _vao;
 
     // MeshSprite share same VAO VBO and Program
-    static cppgl::SPVertexArray _vao;
-    static cppgl::SPVertexBuffer _vbo;
     static cppgl::SPProgram  _program;
 
     static void initStatic();

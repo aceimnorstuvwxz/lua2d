@@ -31,7 +31,18 @@ static void lua2d_demo()
     auto layer = l2d::Layer::create();
     auto imageSprite = l2d::ImageSprite::create("shooting_arrow.png",71, 98);
     imageSprite->load();
+
+    auto cube = l2d::MeshSprite::create("cube.obj", "cube.png");
+    cube->load();
+
+    auto tank = l2d::MeshSprite::create("tank.obj", "tank.jpg");
+    tank->load();
+
+
+    layer->addSprite(cube);
     layer->addSprite(imageSprite);
+    layer->addSprite(tank);
+
     scene->addLayer(layer, 0);
     director.runWithScene(scene);
     director.mainLoop();

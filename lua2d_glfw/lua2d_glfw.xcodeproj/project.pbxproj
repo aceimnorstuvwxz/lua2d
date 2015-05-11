@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B50630B51AFF4525005C22F2 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50630B31AFF4525005C22F2 /* Mesh.cpp */; };
+		B566A0721B01056B00FAB10C /* MeshSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B566A0701B01056B00FAB10C /* MeshSprite.cpp */; };
 		B5F8E1FB1AF367D900A0EA48 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F8E1FA1AF367D900A0EA48 /* OpenGL.framework */; };
 		B5F8E1FD1AF367DF00A0EA48 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F8E1FC1AF367DF00A0EA48 /* IOKit.framework */; };
 		B5F8E1FF1AF367E700A0EA48 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F8E1FE1AF367E700A0EA48 /* CoreVideo.framework */; };
@@ -91,6 +92,8 @@
 /* Begin PBXFileReference section */
 		B50630B31AFF4525005C22F2 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mesh.cpp; path = cppgl/Mesh.cpp; sourceTree = "<group>"; };
 		B50630B41AFF4525005C22F2 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = cppgl/Mesh.h; sourceTree = "<group>"; };
+		B566A0701B01056B00FAB10C /* MeshSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshSprite.cpp; sourceTree = "<group>"; };
+		B566A0711B01056B00FAB10C /* MeshSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshSprite.h; sourceTree = "<group>"; };
 		B5F8E1F01AF367C100A0EA48 /* lua2d_glfw */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lua2d_glfw; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F8E1FA1AF367D900A0EA48 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		B5F8E1FC1AF367DF00A0EA48 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -360,6 +363,8 @@
 		B5F8E2661AF3692A00A0EA48 /* lua2d */ = {
 			isa = PBXGroup;
 			children = (
+				B566A0701B01056B00FAB10C /* MeshSprite.cpp */,
+				B566A0711B01056B00FAB10C /* MeshSprite.h */,
 				B5F8E2771AF3694A00A0EA48 /* utils.cpp */,
 				B5F8E2781AF3694A00A0EA48 /* utils.h */,
 				B5F8E26D1AF3694A00A0EA48 /* lua2d.cpp */,
@@ -571,6 +576,7 @@
 				B5F8E2461AF3690400A0EA48 /* lcode.c in Sources */,
 				B5F8E2581AF3690400A0EA48 /* lparser.c in Sources */,
 				B5F8E2451AF3690400A0EA48 /* lbitlib.c in Sources */,
+				B566A0721B01056B00FAB10C /* MeshSprite.cpp in Sources */,
 				B5F8E27C1AF3694A00A0EA48 /* lua2d.cpp in Sources */,
 				B5F8E2601AF3690400A0EA48 /* luac.c in Sources */,
 				B5F8E2FF1AF60E1500A0EA48 /* stb_image_aug.c in Sources */,

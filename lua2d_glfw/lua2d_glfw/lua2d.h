@@ -30,6 +30,6 @@
 #include "Layer.h"
 #include "Sprite.h"
 #include "ImageSprite.h"
-
+#include "MeshSprite.h"
 
 #endif /* defined(__Lua2d__lua2d__) */

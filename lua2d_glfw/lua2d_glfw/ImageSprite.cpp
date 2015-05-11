@@ -32,16 +32,13 @@ SPImageSprite ImageSprite::create(const std::string &fileName, int width, int he
 }
 
 ImageSprite::ImageSprite(const std::string& fileName, int width, int height):
-_fileName(fileName), _width(width),_height(height)
-{
-    //empty
-}
+_fileName(fileName), _width(width),_height(height){/*empty*/}
 
 void ImageSprite::load()
 {
-    if (_loaded) LOG("ImageSprite", _fileName, "already loaded");
+    if (_loaded) LOG("ImageSprite", _fileName, "already loaded.");
     assert(!_loaded);
-
+    _loaded = true;
     auto image = cppgl::Image::create(_fileName);
     image->load();
     _texture = cppgl::Texture::create(image);
