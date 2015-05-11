@@ -22,7 +22,13 @@ THE SOFTWARE.
 
 #include "cppgl.h"
 
+#ifdef _WIN32
 #include "../GLFW/glfw3.h"
+#endif
+#ifdef __APPLE__
+#include <GLFW/glfw3.h>
+#endif
+
 #include <iostream>
 #include <chrono>
 #include <thread>
@@ -55,9 +61,9 @@ void makeContext()
         exit(EXIT_FAILURE);
     }
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-    //glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     _glfwWindow = glfwCreateWindow(width, height, "cppgl_test", NULL, NULL);
     if (!_glfwWindow){
@@ -101,11 +107,13 @@ static const char* fragmentSource =
 void cppgl_test()
 {
     makeContext();
+#ifdef _WIN32
 	auto err = glewInit();
 	if (err != GLEW_OK)
 	{
 		fprintf(stderr, "%d, Error: %s\n", err, glewGetErrorString(err));
 	}
+#endif
     auto context = Context::Create();
     SPShader vert = Shader::create(ShaderType::Vertex, vertexSource);
     SPShader freg = Shader::create(ShaderType::Fragment, fragmentSource);

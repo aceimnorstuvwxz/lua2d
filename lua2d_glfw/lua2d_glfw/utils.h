@@ -26,13 +26,17 @@
 #include <stdio.h>
 #include <iostream>
 
-//windows
+#ifdef __APPLE__
+#include <GLFW/glfw3.h>
+#endif
+
+#ifdef _WIN32
 #pragma comment(lib, "opengl32.lib")
 #define GLEW_STATIC
 #include "cppgl\glew\glew.h"
 #include "GLFW/glfw3.h"
 #pragma comment(lib,"glfw3.lib")
-
+#endif
 
 #define LOG(...) Log(__FILE__, __FUNCTION__, __LINE__, __VA_ARGS__)
 

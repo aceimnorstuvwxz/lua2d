@@ -6,11 +6,9 @@
 //  Copyright (c) 2015年 chenbingfeng. All rights reserved.
 //
 #include <math.h>
-//#include <unistd.h>
 
 #include <iostream>
 #include <chrono>
-
 
 #include "cppgl/cppgl.h"
 #include "utils.h"
@@ -24,11 +22,25 @@ extern "C" {
 
 }
 
+static void lua2d_demo()
+{
+    auto director = l2d::Director::getInstance();
+    director.init(142, 198, "appName");
 
+    auto scene = l2d::Scene::create();
+    auto layer = l2d::Layer::create();
+    auto imageSprite = l2d::ImageSprite::create("shooting_arrow.png",71, 98);
+    imageSprite->load();
+    layer->addSprite(imageSprite);
+    scene->addLayer(layer, 0);
+    director.runWithScene(scene);
+    director.mainLoop();
+}
 
 int main(int argc, const char * argv[])
 {
     std::cout << "hello world!" << std::endl;
-    cppgl::cppgl_test();
+//    cppgl::cppgl_test();
+    lua2d_demo();
     return 0;
 }
