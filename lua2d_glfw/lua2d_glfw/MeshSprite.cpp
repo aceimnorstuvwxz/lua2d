@@ -21,6 +21,7 @@
  */
 
 #include "MeshSprite.h"
+#include "Director.h"
 
 NS_L2D_BEGIN
 
@@ -57,6 +58,9 @@ void MeshSprite::draw(SPRenderer renderer)
 {
     auto context = renderer->getContext();
     context->useProgram(_program);
+    _program->setUniform(_program->getUniform("view"), Director::getInstance().getView());
+    _program->setUniform(_program->getUniform("proj"), Director::getInstance().getProj());
+    _program->setUniform(_program->getUniform("model"), getModel());
     context->bindTexture(_texture, 0);
     context->drawArrays(*_vao, cppgl::Primitive::Triangles, 0, (unsigned int)_vertexCount);
 }
@@ -73,11 +77,14 @@ void MeshSprite::initStatic()
     "in vec2 texcoord;\n"
     "out vec2 Texcoord;\n"
     "\n"
+    "uniform mat4 model;\n"
+    "uniform mat4 view;\n"
+    "uniform mat4 proj;\n"
     "\n"
     "void main()\n"
     "{\n"
     "    Texcoord = vec2(texcoord.x, -texcoord.y);\n"
-    "    gl_Position = vec4(position, 1.0);\n"
+    "    gl_Position = proj * view * model * vec4(position, 1.0);\n"
     "}\n";
 
     const char* fragmentSource =

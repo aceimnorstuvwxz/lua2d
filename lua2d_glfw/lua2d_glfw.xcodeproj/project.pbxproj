@@ -363,8 +363,6 @@
 		B5F8E2661AF3692A00A0EA48 /* lua2d */ = {
 			isa = PBXGroup;
 			children = (
-				B566A0701B01056B00FAB10C /* MeshSprite.cpp */,
-				B566A0711B01056B00FAB10C /* MeshSprite.h */,
 				B5F8E2771AF3694A00A0EA48 /* utils.cpp */,
 				B5F8E2781AF3694A00A0EA48 /* utils.h */,
 				B5F8E26D1AF3694A00A0EA48 /* lua2d.cpp */,
@@ -383,6 +381,8 @@
 				B5F8E2761AF3694A00A0EA48 /* Sprite.h */,
 				B5F8E2691AF3694A00A0EA48 /* ImageSprite.cpp */,
 				B5F8E26A1AF3694A00A0EA48 /* ImageSprite.h */,
+				B566A0701B01056B00FAB10C /* MeshSprite.cpp */,
+				B566A0711B01056B00FAB10C /* MeshSprite.h */,
 			);
 			name = lua2d;
 			sourceTree = "<group>";

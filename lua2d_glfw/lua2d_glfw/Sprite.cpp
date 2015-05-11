@@ -34,34 +34,53 @@ void Sprite::show()
     _isVisible = true;
 }
 
-void Sprite::setX(int x)
+void Sprite::setX(float x)
 {
     _x = x;
+    _isDirty = true;
 }
 
-void Sprite::setY(int y)
+void Sprite::setY(float y)
 {
     _y = y;
+    _isDirty = true;
 }
 
-void Sprite::setZ(int z)
+void Sprite::setZ(float z)
 {
     _z = z;
+    _isDirty = true;
 }
 
-void Sprite::rotate(int degree)
+void Sprite::rotate(float degree)
 {
     _rotate = degree;
+    _isDirty = true;
 }
 
 void Sprite::setAlpha(float alpha)
 {
     _alpha = alpha;
+    _isDirty = true;
 }
 
 void Sprite::scale(float scaler)
 {
     _scale = scaler;
+    _isDirty = true;
+}
+
+glm::mat4& Sprite::getModel()
+{
+    if (!_isDirty) return _model;
+
+    _model = glm::mat4(1.0f);
+
+    _model = glm::scale(_model, glm::vec3(_scale));
+    _model = glm::translate(_model, glm::vec3(_x, _y, _z));
+    _model = glm::rotate(_model, glm::radians(_rotate), glm::vec3(0.0f, 0.0f, 1.0f));
+    _isDirty = false;
+    return _model;
 }
 
 NS_L2D_END

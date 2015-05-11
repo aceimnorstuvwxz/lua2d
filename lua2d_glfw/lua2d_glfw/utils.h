@@ -23,8 +23,8 @@
 #ifndef __Lua2d__utils__
 #define __Lua2d__utils__
 
-#include <stdio.h>
 #include <iostream>
+#include "cppgl/cppgl.h"
 
 #ifdef __APPLE__
 #include <GLFW/glfw3.h>
@@ -60,5 +60,13 @@ void Log(const char* file, const char* func, int line, const Args&... args)
 
 #define NS_L2D_BEGIN  namespace l2d{
 #define NS_L2D_END    }
+
+inline void printMat4(const glm::mat4& m)
+{
+    for (int i = 0; i < 16;  i++) {
+        std::cout << (glm::value_ptr(m))[i] <<" ";
+    }
+    std::cout << std::endl;
+}
 
 #endif /* defined(__Lua2d__utils__) */

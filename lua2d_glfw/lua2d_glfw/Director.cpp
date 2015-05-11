@@ -46,6 +46,7 @@ GLFWwindow* makeContext(int width, int height, const std::string& title)
         std::cerr << "GLFW init failed" << std::endl;
         exit(EXIT_FAILURE);
     }
+    
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
@@ -64,6 +65,7 @@ GLFWwindow* makeContext(int width, int height, const std::string& title)
 
     return glfwWindow;
 }
+
 Director Director::_instance;
 
 Director& Director::getInstance()
@@ -88,6 +90,31 @@ void Director::runWithScene(SPScene scene)
 {
     LOG("runWithScene");
     _scene = scene;
+}
+
+void Director::lookAt(const glm::vec3 &eye)
+{
+    lookAt(eye, glm::vec3(eye.x, eye.y, 0.0f));
+}
+
+void Director::lookAt(const glm::vec3& eye, const glm::vec3& center, const glm::vec3& up)
+{
+    _view = glm::lookAt(eye, center, up);
+}
+
+glm::mat4& Director::getView()
+{
+    return _view;
+}
+
+glm::mat4& Director::getProj()
+{
+    return _proj;
+}
+
+void Director::setProj(float fovy, float aspect, float zNear, float zFar)
+{
+    _proj = glm::perspective(fovy, aspect, zNear, zFar);
 }
 
 void Director::mainLoop()

@@ -40,6 +40,7 @@ void Renderer::init(int width, int height, const std::string& title)
     _context->clearColor({1.0f, 1.0f, 1.0f, 1.0f});
     _context->enable(cppgl::Capability::Blend);
     _context->blendFunc(cppgl::BlendFactor::SRC_ALPHA, cppgl::BlendFactor::ONE_MINUS_SRC_ALPHA);
+    _context->enable(cppgl::Capability::DepthTest);
 }
 
 cppgl::SPContext Renderer::getContext()

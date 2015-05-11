@@ -44,8 +44,12 @@ public:
     // one scene is running.
     void runWithScene(SPScene scene);
 
-    cppgl::SPContext& getContext();
-    
+    void lookAt(const glm::vec3& eye);
+    void lookAt(const glm::vec3& eye, const glm::vec3& center, const glm::vec3& up = glm::vec3(0.0f, 1.0f, 0.0f));
+    glm::mat4& getView();
+    glm::mat4& getProj();
+    void setProj(float fovy, float aspect, float zNear, float zFar);
+
     void mainLoop();
 private:
     static Director _instance;
@@ -53,6 +57,8 @@ private:
     int _width;
     int _height;
     std::string _appName;
+    glm::mat4 _view = glm::mat4(1.0f);
+    glm::mat4 _proj = glm::mat4(1.0f);
     SPScene _scene;
     SPRenderer _renderer;
 
