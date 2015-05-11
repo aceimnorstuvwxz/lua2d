@@ -42,7 +42,7 @@ void MeshSprite::load()
     auto mesh = cppgl::Mesh::create(_objFile);
     _vertexCount = mesh->vertexCount();
     _vbo = cppgl::VertexBuffer::create(mesh->vertices(), sizeof(cppgl::Vertex) * mesh->vertexCount(), cppgl::BufferUsage::StaticDraw);
-
+    LOG(_objFile, "vertex count", mesh->vertexCount());
     _vao = cppgl::VertexArray::create();
     _vao->bindAttribute(_program->getAttribute("position"), *_vbo, cppgl::Type::Float, 3, 8*sizeof(float), 0);
     _vao->bindAttribute(_program->getAttribute("texcoord"), *_vbo, cppgl::Type::Float, 2, 8*sizeof(float), 3*sizeof(float));
